@@ -8,6 +8,12 @@ package facebook.simulator;
  *
  * @author pc
  */
-public class Comments {
+class Comment extends Post {
+
     
+
+public Comment(String author, String timeCreats, String textContent) {
+        super(author, timeCreats, textContent);
+    }
+
 }
