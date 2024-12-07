@@ -1133,7 +1133,7 @@ public class GUI extends javax.swing.JFrame {
                 .addComponent(jPanel13, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(5, 5, 5)
                 .addComponent(jPanel8, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(0, 589, Short.MAX_VALUE))
+                .addGap(0, 644, Short.MAX_VALUE))
             .addGroup(jPanel6Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                 .addGroup(jPanel6Layout.createSequentialGroup()
                     .addContainerGap()
@@ -2239,7 +2239,7 @@ public class GUI extends javax.swing.JFrame {
             .addGroup(jPanel1Layout.createSequentialGroup()
                 .addComponent(jPanel2, javax.swing.GroupLayout.PREFERRED_SIZE, 62, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(0, 0, 0)
-                .addComponent(jPanel4, javax.swing.GroupLayout.DEFAULT_SIZE, 1085, Short.MAX_VALUE))
+                .addComponent(jPanel4, javax.swing.GroupLayout.DEFAULT_SIZE, 1140, Short.MAX_VALUE))
         );
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
@@ -2250,7 +2250,7 @@ public class GUI extends javax.swing.JFrame {
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, 1147, Short.MAX_VALUE)
+            .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, 1202, Short.MAX_VALUE)
         );
 
         pack();
@@ -2723,15 +2723,17 @@ jPanel56.setBackground(Color.white);        // TODO add your handling code here:
     }//GEN-LAST:event_jPanel56MousePressed
 
     private void jLabel54MouseMoved(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel54MouseMoved
+      jPanel60.setBackground(new Color(249,249,249));  // TODO add your handling code here:
         // TODO add your handling code here:
     }//GEN-LAST:event_jLabel54MouseMoved
 
     private void jLabel54MouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel54MouseExited
+      jPanel60.setBackground(Color.white);  // TODO add your handling code here:
         // TODO add your handling code here:
     }//GEN-LAST:event_jLabel54MouseExited
 
     private void jPanel60MouseMoved(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jPanel60MouseMoved
-        // TODO add your handling code here:
+      jPanel60.setBackground(new Color(249,249,249));  // TODO add your handling code here:
     }//GEN-LAST:event_jPanel60MouseMoved
 
     private void jPanel60MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jPanel60MouseClicked
@@ -2739,6 +2741,7 @@ jPanel56.setBackground(Color.white);        // TODO add your handling code here:
     }//GEN-LAST:event_jPanel60MouseClicked
 
     private void jPanel60MouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jPanel60MouseExited
+      jPanel60.setBackground(Color.white);  // TODO add your handling code here:
         // TODO add your handling code here:
     }//GEN-LAST:event_jPanel60MouseExited
 
@@ -2924,7 +2927,6 @@ jPanel56.setBackground(Color.white);        // TODO add your handling code here:
     private javax.swing.JPanel jPanel56;
     private javax.swing.JPanel jPanel57;
     private javax.swing.JPanel jPanel58;
-    private javax.swing.JPanel jPanel59;
     private javax.swing.JPanel jPanel6;
     private javax.swing.JPanel jPanel60;
     private javax.swing.JPanel jPanel61;
