@@ -12,6 +12,10 @@ class Post extends Contentt implements Shares, Likes {
         return PostPrivacy;
     }
 
+    public int getLikes() {
+        return likes;
+    }
+
     public void setPostPrivacy(PrivacySetting PostPrivacy) {
         this.PostPrivacy = PostPrivacy;
     }
