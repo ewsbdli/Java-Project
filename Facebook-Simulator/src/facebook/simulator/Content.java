@@ -4,14 +4,14 @@
  */
 package facebook.simulator;
 
-abstract class Contentt {
+abstract class Content {
     private String author;
     private String timeCreats;
 
-    public Contentt() {
+    public Content() {
     }
 
-    public Contentt( String author, String timeCreats) {
+    public Content( String author, String timeCreats) {
         this.author = author;
         this.timeCreats = timeCreats;
     }

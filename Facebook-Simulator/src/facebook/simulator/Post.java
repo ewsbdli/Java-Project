@@ -3,7 +3,7 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
  */
 package facebook.simulator;
-class Post extends Contentt implements Shares, Likes {
+class Post extends Content implements Shares, Likes {
     private String textContent;
     private int likes;
     PrivacySetting  PostPrivacy;

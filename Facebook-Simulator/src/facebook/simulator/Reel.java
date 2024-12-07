@@ -4,7 +4,7 @@
  */
 package facebook.simulator;
 
-class Reel extends Contentt implements Shares, Likes {
+class Reel extends Content implements Shares, Likes {
     private String video;
     private int likes;
 

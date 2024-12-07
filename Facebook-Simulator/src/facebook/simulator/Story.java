@@ -4,7 +4,7 @@
  */
 package facebook.simulator;
 
-class Story extends Contentt implements Shares {
+class Story extends Content implements Shares {
 
     private String image;
     private String age = "24hour";
