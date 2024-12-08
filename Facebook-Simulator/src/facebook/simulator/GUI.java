@@ -6,6 +6,7 @@ package facebook.simulator;
 
 import java.awt.Color;
 import javax.swing.ImageIcon;
+import javax.swing.JFrame;
 import javax.swing.JOptionPane;
 
 /**
@@ -15,15 +16,15 @@ import javax.swing.JOptionPane;
 public class GUI extends javax.swing.JFrame {
 
     User Me = new User("Maha Mohamed");
-    User User1 = new User("Judy");
-    User User2 = new User("Malak");
-    User User3 = new User("Wema");
+    User User1 = new User("Marnie");
+    User User2 = new User("Sawako");
+    User User3 = new User("Rin Sohma");
     User User4 = new User("Shim Sooae");
 
     public GUI() {
         initComponents();
-        this.setIconImage(new javax.swing.ImageIcon(getClass().getResource("/facebook/simulator/images/facebook_icon.png")).getImage());
-        this.setExtendedState(javax.swing.JFrame.MAXIMIZED_BOTH);
+        this.setIconImage(new ImageIcon(getClass().getResource("/facebook/simulator/images/facebook_icon.png")).getImage());
+        this.setExtendedState(JFrame.MAXIMIZED_BOTH);
 
     }
 
@@ -116,12 +117,13 @@ public class GUI extends javax.swing.JFrame {
         jSeparator5 = new javax.swing.JSeparator();
         jLabel52 = new javax.swing.JLabel();
         jLabel53 = new javax.swing.JLabel();
-        jPanel60 = new javax.swing.JPanel();
-        jLabel54 = new javax.swing.JLabel();
-        jPanel61 = new javax.swing.JPanel();
-        jLabel55 = new javax.swing.JLabel();
+        jPanel5 = new javax.swing.JPanel();
         jPanel62 = new javax.swing.JPanel();
         jLabel56 = new javax.swing.JLabel();
+        jPanel61 = new javax.swing.JPanel();
+        jLabel55 = new javax.swing.JLabel();
+        jPanel60 = new javax.swing.JPanel();
+        jLabel54 = new javax.swing.JLabel();
         jPanel55 = new javax.swing.JPanel();
         jPanel28 = new javax.swing.JPanel();
         jLabel1 = new javax.swing.JLabel();
@@ -998,6 +1000,11 @@ public class GUI extends javax.swing.JFrame {
         jLabel66.setFont(new java.awt.Font("Segoe UI Semibold", 0, 18)); // NOI18N
         jLabel66.setText("User");
         jLabel66.setToolTipText("");
+        jLabel66.addMouseMotionListener(new java.awt.event.MouseMotionAdapter() {
+            public void mouseMoved(java.awt.event.MouseEvent evt) {
+                jLabel66MouseMoved(evt);
+            }
+        });
 
         javax.swing.GroupLayout jPanel46Layout = new javax.swing.GroupLayout(jPanel46);
         jPanel46.setLayout(jPanel46Layout);
@@ -1182,7 +1189,7 @@ public class GUI extends javax.swing.JFrame {
                 .addComponent(jLabel42, javax.swing.GroupLayout.PREFERRED_SIZE, 41, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addComponent(jLabel43)
-                .addContainerGap(178, Short.MAX_VALUE))
+                .addContainerGap(177, Short.MAX_VALUE))
         );
         jPanel51Layout.setVerticalGroup(
             jPanel51Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -1214,7 +1221,7 @@ public class GUI extends javax.swing.JFrame {
                 .addGroup(jPanel43Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(jPanel48, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jLabel36, javax.swing.GroupLayout.PREFERRED_SIZE, 180, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(0, 134, Short.MAX_VALUE))
+                .addGap(0, 133, Short.MAX_VALUE))
         );
         jPanel43Layout.setVerticalGroup(
             jPanel43Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -1283,6 +1290,57 @@ public class GUI extends javax.swing.JFrame {
         jLabel53.setFont(new java.awt.Font("Segoe UI", 1, 16)); // NOI18N
         jLabel53.setText("In love with Sakura blossoms.");
 
+        jPanel5.setBackground(new java.awt.Color(255, 255, 255));
+
+        jPanel62.setBackground(new java.awt.Color(255, 255, 255));
+
+        jLabel56.setBackground(new java.awt.Color(255, 255, 255));
+        jLabel56.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
+        jLabel56.setForeground(new java.awt.Color(153, 153, 153));
+        jLabel56.setIcon(new javax.swing.ImageIcon(getClass().getResource("/facebook/simulator/images/share (1).png"))); // NOI18N
+        jLabel56.setText("Share");
+
+        javax.swing.GroupLayout jPanel62Layout = new javax.swing.GroupLayout(jPanel62);
+        jPanel62.setLayout(jPanel62Layout);
+        jPanel62Layout.setHorizontalGroup(
+            jPanel62Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel62Layout.createSequentialGroup()
+                .addGap(10, 10, 10)
+                .addComponent(jLabel56, javax.swing.GroupLayout.PREFERRED_SIZE, 106, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(10, 10, 10))
+        );
+        jPanel62Layout.setVerticalGroup(
+            jPanel62Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel62Layout.createSequentialGroup()
+                .addGap(6, 6, 6)
+                .addComponent(jLabel56)
+                .addGap(6, 6, 6))
+        );
+
+        jPanel61.setBackground(new java.awt.Color(255, 255, 255));
+
+        jLabel55.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
+        jLabel55.setForeground(new java.awt.Color(153, 153, 153));
+        jLabel55.setIcon(new javax.swing.ImageIcon(getClass().getResource("/facebook/simulator/images/Comment (2).png"))); // NOI18N
+        jLabel55.setText("Comment");
+
+        javax.swing.GroupLayout jPanel61Layout = new javax.swing.GroupLayout(jPanel61);
+        jPanel61.setLayout(jPanel61Layout);
+        jPanel61Layout.setHorizontalGroup(
+            jPanel61Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel61Layout.createSequentialGroup()
+                .addGap(10, 10, 10)
+                .addComponent(jLabel55, javax.swing.GroupLayout.DEFAULT_SIZE, 123, Short.MAX_VALUE)
+                .addGap(10, 10, 10))
+        );
+        jPanel61Layout.setVerticalGroup(
+            jPanel61Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel61Layout.createSequentialGroup()
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addComponent(jLabel55)
+                .addContainerGap())
+        );
+
         jPanel60.setBackground(new java.awt.Color(255, 255, 255));
         jPanel60.addMouseMotionListener(new java.awt.event.MouseMotionAdapter() {
             public void mouseMoved(java.awt.event.MouseEvent evt) {
@@ -1326,63 +1384,37 @@ public class GUI extends javax.swing.JFrame {
             jPanel60Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel60Layout.createSequentialGroup()
                 .addGap(10, 10, 10)
-                .addComponent(jLabel54, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(10, 10, 10))
+                .addComponent(jLabel54, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE))
         );
         jPanel60Layout.setVerticalGroup(
             jPanel60Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel60Layout.createSequentialGroup()
                 .addGap(6, 6, 6)
-                .addComponent(jLabel54, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addGap(6, 6, 6))
+                .addComponent(jLabel54)
+                .addContainerGap())
         );
 
-        jPanel61.setBackground(new java.awt.Color(255, 255, 255));
-
-        jLabel55.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
-        jLabel55.setForeground(new java.awt.Color(153, 153, 153));
-        jLabel55.setIcon(new javax.swing.ImageIcon(getClass().getResource("/facebook/simulator/images/Comment (2).png"))); // NOI18N
-        jLabel55.setText("Comment");
-
-        javax.swing.GroupLayout jPanel61Layout = new javax.swing.GroupLayout(jPanel61);
-        jPanel61.setLayout(jPanel61Layout);
-        jPanel61Layout.setHorizontalGroup(
-            jPanel61Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel61Layout.createSequentialGroup()
-                .addGap(10, 10, 10)
-                .addComponent(jLabel55, javax.swing.GroupLayout.DEFAULT_SIZE, 123, Short.MAX_VALUE)
-                .addGap(10, 10, 10))
+        javax.swing.GroupLayout jPanel5Layout = new javax.swing.GroupLayout(jPanel5);
+        jPanel5.setLayout(jPanel5Layout);
+        jPanel5Layout.setHorizontalGroup(
+            jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel5Layout.createSequentialGroup()
+                .addGap(20, 20, 20)
+                .addComponent(jPanel60, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 65, Short.MAX_VALUE)
+                .addComponent(jPanel61, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(65, 65, 65)
+                .addComponent(jPanel62, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap())
         );
-        jPanel61Layout.setVerticalGroup(
-            jPanel61Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel61Layout.createSequentialGroup()
-                .addComponent(jLabel55)
-                .addGap(0, 8, Short.MAX_VALUE))
-        );
-
-        jPanel62.setBackground(new java.awt.Color(255, 255, 255));
-
-        jLabel56.setBackground(new java.awt.Color(255, 255, 255));
-        jLabel56.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
-        jLabel56.setForeground(new java.awt.Color(153, 153, 153));
-        jLabel56.setIcon(new javax.swing.ImageIcon(getClass().getResource("/facebook/simulator/images/share (1).png"))); // NOI18N
-        jLabel56.setText("Share");
-
-        javax.swing.GroupLayout jPanel62Layout = new javax.swing.GroupLayout(jPanel62);
-        jPanel62.setLayout(jPanel62Layout);
-        jPanel62Layout.setHorizontalGroup(
-            jPanel62Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel62Layout.createSequentialGroup()
-                .addGap(10, 10, 10)
-                .addComponent(jLabel56, javax.swing.GroupLayout.PREFERRED_SIZE, 106, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(10, 10, 10))
-        );
-        jPanel62Layout.setVerticalGroup(
-            jPanel62Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel62Layout.createSequentialGroup()
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addComponent(jLabel56)
-                .addGap(6, 6, 6))
+        jPanel5Layout.setVerticalGroup(
+            jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel5Layout.createSequentialGroup()
+                .addGap(0, 0, Short.MAX_VALUE)
+                .addGroup(jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                    .addComponent(jPanel60, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(jPanel62, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(jPanel61, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
         );
 
         javax.swing.GroupLayout jPanel54Layout = new javax.swing.GroupLayout(jPanel54);
@@ -1400,17 +1432,12 @@ public class GUI extends javax.swing.JFrame {
                         .addGap(41, 41, 41)
                         .addGroup(jPanel54Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                             .addComponent(jLabel52, javax.swing.GroupLayout.PREFERRED_SIZE, 43, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel54Layout.createSequentialGroup()
-                                .addGap(20, 20, 20)
-                                .addComponent(jPanel60, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addGap(56, 56, 56)
-                                .addComponent(jPanel61, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addGap(84, 84, 84)
-                                .addComponent(jPanel62, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addGap(8, 8, 8))
                             .addComponent(jLabel48, javax.swing.GroupLayout.PREFERRED_SIZE, 565, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addComponent(jSeparator5)
-                            .addComponent(jLabel53, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))))
+                            .addComponent(jLabel53, javax.swing.GroupLayout.DEFAULT_SIZE, 566, Short.MAX_VALUE)))
+                    .addGroup(jPanel54Layout.createSequentialGroup()
+                        .addGap(56, 56, 56)
+                        .addComponent(jPanel5, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
                 .addGap(41, 41, 41))
         );
         jPanel54Layout.setVerticalGroup(
@@ -1429,18 +1456,9 @@ public class GUI extends javax.swing.JFrame {
                 .addComponent(jLabel52)
                 .addGap(0, 0, 0)
                 .addComponent(jSeparator5, javax.swing.GroupLayout.PREFERRED_SIZE, 10, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(0, 0, 0)
-                .addGroup(jPanel54Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(jPanel54Layout.createSequentialGroup()
-                        .addComponent(jPanel62, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel54Layout.createSequentialGroup()
-                        .addGroup(jPanel54Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                            .addGroup(jPanel54Layout.createSequentialGroup()
-                                .addGap(0, 0, Short.MAX_VALUE)
-                                .addComponent(jPanel61, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                            .addComponent(jPanel60, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                        .addGap(18, 18, 18))))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(jPanel5, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(9, Short.MAX_VALUE))
         );
 
         jPanel55.setVisible(false);
@@ -1649,13 +1667,15 @@ public class GUI extends javax.swing.JFrame {
         jPanel55Layout.setHorizontalGroup(
             jPanel55Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel55Layout.createSequentialGroup()
-                .addGap(21, 21, 21)
+                .addGap(30, 30, 30)
                 .addGroup(jPanel55Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(jPanel55Layout.createSequentialGroup()
                         .addGroup(jPanel55Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                            .addComponent(jSeparator4, javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(jPanel58, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(jPanel28, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                            .addGroup(jPanel55Layout.createSequentialGroup()
+                                .addGap(0, 0, Short.MAX_VALUE)
+                                .addComponent(jPanel58, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addComponent(jPanel28, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                            .addComponent(jSeparator4))
                         .addGap(30, 30, 30))
                     .addGroup(jPanel55Layout.createSequentialGroup()
                         .addGap(20, 20, 20)
@@ -1722,8 +1742,8 @@ public class GUI extends javax.swing.JFrame {
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(jPanel55, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addComponent(jPanel54, javax.swing.GroupLayout.PREFERRED_SIZE, 509, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(23, Short.MAX_VALUE))
+                .addComponent(jPanel54, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(40, 40, 40))
             .addComponent(jSeparator2)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel4Layout.createSequentialGroup()
                 .addGroup(jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
@@ -2057,14 +2077,13 @@ public class GUI extends javax.swing.JFrame {
             .addGroup(jPanel1Layout.createSequentialGroup()
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(jPanel59, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addGroup(jPanel1Layout.createSequentialGroup()
-                        .addComponent(jPanel49, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(0, 0, Short.MAX_VALUE))
+                    .addComponent(jPanel49, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addGroup(jPanel1Layout.createSequentialGroup()
                         .addContainerGap()
-                        .addComponent(jPanel68, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
-                .addComponent(jPanel4, javax.swing.GroupLayout.PREFERRED_SIZE, 993, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addComponent(jPanel68, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                .addGap(0, 0, 0)
+                .addComponent(jPanel4, javax.swing.GroupLayout.PREFERRED_SIZE, 987, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(104, 104, 104))
         );
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
@@ -2075,7 +2094,7 @@ public class GUI extends javax.swing.JFrame {
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jPanel1, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 1052, javax.swing.GroupLayout.PREFERRED_SIZE)
+            .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, 1052, javax.swing.GroupLayout.PREFERRED_SIZE)
         );
 
         pack();
@@ -2086,63 +2105,62 @@ public class GUI extends javax.swing.JFrame {
     }//GEN-LAST:event_jPanel6MouseExited
 
     private void jPanel6MouseMoved(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jPanel6MouseMoved
-        // TODO add your handling code here:
+
     }//GEN-LAST:event_jPanel6MouseMoved
 
     private void jPanel19MouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jPanel19MouseExited
         jPanel19.setBackground(new Color(242, 244, 247));
-        // TODO add your handling code here:
+
     }//GEN-LAST:event_jPanel19MouseExited
 
     private void jPanel19MouseMoved(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jPanel19MouseMoved
         jPanel19.setBackground(new Color(249, 249, 249));
-        // TODO add your handling code here:
+
     }//GEN-LAST:event_jPanel19MouseMoved
 
     private void jPanel8MouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jPanel8MouseExited
         jPanel8.setBackground(new Color(242, 244, 247));
-        // TODO add your handling code here:
+
     }//GEN-LAST:event_jPanel8MouseExited
 
     private void jPanel8MouseMoved(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jPanel8MouseMoved
         jPanel8.setBackground(new Color(249, 249, 249));
-        // TODO add your handling code here:
+
     }//GEN-LAST:event_jPanel8MouseMoved
 
     private void jPanel13MouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jPanel13MouseExited
         jPanel13.setBackground(new Color(242, 244, 247));
-        // TODO add your handling code here:
+
     }//GEN-LAST:event_jPanel13MouseExited
 
     private void jPanel13MouseMoved(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jPanel13MouseMoved
         jPanel13.setBackground(new Color(249, 249, 249));
-        // TODO add your handling code here:
+
     }//GEN-LAST:event_jPanel13MouseMoved
 
     private void jPanel15MouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jPanel15MouseExited
         jPanel15.setBackground(new Color(242, 244, 247));
-        // TODO add your handling code here:
+
     }//GEN-LAST:event_jPanel15MouseExited
 
     private void jPanel15MouseMoved(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jPanel15MouseMoved
         jPanel15.setBackground(new Color(249, 249, 249));
-        // TODO add your handling code here:
+
     }//GEN-LAST:event_jPanel15MouseMoved
 
     private void jPanel7MouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jPanel7MouseExited
         jPanel7.setBackground(new Color(242, 244, 247));
-        // TODO add your handling code here:
+
     }//GEN-LAST:event_jPanel7MouseExited
 
     private void jPanel7MouseMoved(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jPanel7MouseMoved
         jPanel7.setBackground(new Color(249, 249, 249));
-        // TODO add your handling code here:
+
     }//GEN-LAST:event_jPanel7MouseMoved
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
-        Post P1 = new Post();
+        Post P1 = new Post(Me.getName(),"Just now",null);
         P1.setAuthor(Me.getName());
-        P1.setTimeCreats("Just now");
         P1.setTextContent(jTextField2.getText());
         jLabel1.setText(jTextField2.getText());
         if (jRadioButton2.isSelected()) {
@@ -2159,161 +2177,161 @@ public class GUI extends javax.swing.JFrame {
         jLabel8.setText(P1.getTimeCreats());
         jPanel55.setVisible(true);
         jButton1.setEnabled(false);
-        // TODO add your handling code here:
+
     }//GEN-LAST:event_jButton1ActionPerformed
 
     private void jPanel27MouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jPanel27MouseExited
         jPanel27.setBackground(new Color(255, 255, 255));
 
-        // TODO add your handling code here:
+
     }//GEN-LAST:event_jPanel27MouseExited
 
     private void jPanel27MouseMoved(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jPanel27MouseMoved
         jPanel27.setBackground(new Color(249, 249, 249));
-        // TODO add your handling code here:
+
     }//GEN-LAST:event_jPanel27MouseMoved
 
     private void jLabel24MouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel24MouseExited
         jPanel27.setBackground(new Color(255, 255, 255));
-        // TODO add your handling code here:
+
     }//GEN-LAST:event_jLabel24MouseExited
 
     private void jLabel24MouseMoved(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel24MouseMoved
         jPanel27.setBackground(new Color(249, 249, 249));
-        // TODO add your handling code here:
+
     }//GEN-LAST:event_jLabel24MouseMoved
 
     private void jPanel26MouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jPanel26MouseExited
         jPanel26.setBackground(new Color(255, 255, 255));
-        // TODO add your handling code here:
+
     }//GEN-LAST:event_jPanel26MouseExited
 
     private void jPanel26MouseMoved(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jPanel26MouseMoved
         jPanel26.setBackground(new Color(249, 249, 249));
-        // TODO add your handling code here:
+
     }//GEN-LAST:event_jPanel26MouseMoved
 
     private void jPanel25MouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jPanel25MouseExited
         jPanel25.setBackground(new Color(255, 255, 255));
-        // TODO add your handling code here:
+
     }//GEN-LAST:event_jPanel25MouseExited
 
     private void jPanel25MouseMoved(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jPanel25MouseMoved
         jPanel25.setBackground(new Color(249, 249, 249));
-        // TODO add your handling code here:
+
     }//GEN-LAST:event_jPanel25MouseMoved
 
     private void jRadioButton3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jRadioButton3ActionPerformed
-        // TODO add your handling code here:
+
     }//GEN-LAST:event_jRadioButton3ActionPerformed
 
     private void jRadioButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jRadioButton2ActionPerformed
-        // TODO add your handling code here:
+
     }//GEN-LAST:event_jRadioButton2ActionPerformed
 
     private void jTextField2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField2ActionPerformed
-        // TODO add your handling code here:
+
     }//GEN-LAST:event_jTextField2ActionPerformed
 
     private void jPanel44MouseMoved(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jPanel44MouseMoved
-// TODO add your handling code here:
+
     }//GEN-LAST:event_jPanel44MouseMoved
 
     private void jPanel44MouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jPanel44MouseExited
-// TODO add your handling code here:
+
     }//GEN-LAST:event_jPanel44MouseExited
 
     private void jPanel45MouseMoved(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jPanel45MouseMoved
         jPanel45.setBackground(new Color(249, 249, 249));
-        // TODO add your handling code here:
+
     }//GEN-LAST:event_jPanel45MouseMoved
 
     private void jPanel45MouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jPanel45MouseExited
         jPanel45.setBackground(new Color(242, 244, 247));
-        // TODO add your handling code here:
+
     }//GEN-LAST:event_jPanel45MouseExited
 
     private void jPanel46MouseMoved(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jPanel46MouseMoved
-              jPanel46.setBackground(new Color(249, 249, 249));
-  // TODO add your handling code here:
+        jPanel46.setBackground(new Color(249, 249, 249));
+
     }//GEN-LAST:event_jPanel46MouseMoved
 
     private void jPanel46MouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jPanel46MouseExited
         jPanel46.setBackground(new Color(242, 244, 247));
-        // TODO add your handling code here:
+
     }//GEN-LAST:event_jPanel46MouseExited
 
     private void jPanel48MouseMoved(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jPanel48MouseMoved
-        // TODO add your handling code here:
+
     }//GEN-LAST:event_jPanel48MouseMoved
 
     private void jPanel48MouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jPanel48MouseExited
-        // TODO add your handling code here:
+
     }//GEN-LAST:event_jPanel48MouseExited
 
     private void jPanel50MouseMoved(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jPanel50MouseMoved
         jPanel50.setBackground(new Color(249, 249, 249));
-        // TODO add your handling code here:
+
     }//GEN-LAST:event_jPanel50MouseMoved
 
     private void jPanel50MouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jPanel50MouseExited
         jPanel50.setBackground(new Color(242, 244, 247));
-// TODO add your handling code here:
+
     }//GEN-LAST:event_jPanel50MouseExited
 
     private void jPanel51MouseMoved(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jPanel51MouseMoved
         jPanel51.setBackground(new Color(249, 249, 249));
-        // TODO add your handling code here:
+
     }//GEN-LAST:event_jPanel51MouseMoved
 
     private void jPanel51MouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jPanel51MouseEntered
-        // TODO add your handling code here:
+
     }//GEN-LAST:event_jPanel51MouseEntered
 
     private void jPanel51MouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jPanel51MouseExited
         jPanel51.setBackground(new Color(242, 244, 247));
-// TODO add your handling code here:
+
     }//GEN-LAST:event_jPanel51MouseExited
 
     private void jPanel43MouseMoved(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jPanel43MouseMoved
-        // TODO add your handling code here:
+
     }//GEN-LAST:event_jPanel43MouseMoved
 
     private void jPanel43MouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jPanel43MouseExited
-        // TODO add your handling code here:
+
     }//GEN-LAST:event_jPanel43MouseExited
 
     private void jTextField2MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jTextField2MouseClicked
-        // TODO add your handling code here:
+
     }//GEN-LAST:event_jTextField2MouseClicked
 
     private void jTextField2MouseMoved(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jTextField2MouseMoved
-        //jTextField2.setText(""); // TODO add your handling code here:
+        //jTextField2.setText(""); 
     }//GEN-LAST:event_jTextField2MouseMoved
 
     private void jTextField2MousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jTextField2MousePressed
         jTextField2.setText("");
-        jTextField2.setForeground(new Color(0, 0, 0));// TODO add your handling code here:
+        jTextField2.setForeground(new Color(0, 0, 0));
     }//GEN-LAST:event_jTextField2MousePressed
 
     private void jPanel56MouseMoved(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jPanel56MouseMoved
-        jPanel56.setBackground(new Color(249, 249, 249)); // TODO add your handling code here:
+        jPanel56.setBackground(new Color(249, 249, 249));
     }//GEN-LAST:event_jPanel56MouseMoved
 
     private void jPanel56MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jPanel56MouseClicked
-        // TODO add your handling code here:
+
     }//GEN-LAST:event_jPanel56MouseClicked
 
     private void jPanel56MouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jPanel56MouseExited
-        jPanel56.setBackground(Color.white);        // TODO add your handling code here:
+        jPanel56.setBackground(Color.white);
     }//GEN-LAST:event_jPanel56MouseExited
 
     private void jLabel49MouseMoved(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel49MouseMoved
-        jPanel56.setBackground(new Color(249, 249, 249));        // TODO add your handling code here:
+        jPanel56.setBackground(new Color(249, 249, 249));
     }//GEN-LAST:event_jLabel49MouseMoved
 
     private void jLabel49MouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel49MouseExited
-        jPanel56.setBackground(Color.white);        // TODO add your handling code here:
+        jPanel56.setBackground(Color.white);
     }//GEN-LAST:event_jLabel49MouseExited
 
     private void jPanel56MousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jPanel56MousePressed
@@ -2323,30 +2341,30 @@ public class GUI extends javax.swing.JFrame {
         jLabel44.setVisible(true);
         jLabel49.setForeground(new Color(93, 125, 204));
         ImageIcon icon = new ImageIcon(getClass().getResource("/facebook/simulator/images/Blue-Like.png"));
-        jLabel49.setIcon(icon);        // TODO add your handling code here:
+        jLabel49.setIcon(icon);
     }//GEN-LAST:event_jPanel56MousePressed
 
     private void jLabel54MouseMoved(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel54MouseMoved
-        jPanel60.setBackground(new Color(249, 249, 249));  // TODO add your handling code here:
-        // TODO add your handling code here:
+        jPanel60.setBackground(new Color(249, 249, 249));
+
     }//GEN-LAST:event_jLabel54MouseMoved
 
     private void jLabel54MouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel54MouseExited
-        jPanel60.setBackground(Color.white);  // TODO add your handling code here:
-        // TODO add your handling code here:
+        jPanel60.setBackground(Color.white);
+
     }//GEN-LAST:event_jLabel54MouseExited
 
     private void jPanel60MouseMoved(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jPanel60MouseMoved
-        jPanel60.setBackground(new Color(249, 249, 249));  // TODO add your handling code here:
+        jPanel60.setBackground(new Color(249, 249, 249));
     }//GEN-LAST:event_jPanel60MouseMoved
 
     private void jPanel60MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jPanel60MouseClicked
-        // TODO add your handling code here:
+
     }//GEN-LAST:event_jPanel60MouseClicked
 
     private void jPanel60MouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jPanel60MouseExited
-        jPanel60.setBackground(Color.white);  // TODO add your handling code here:
-        // TODO add your handling code here:
+        jPanel60.setBackground(Color.white);
+
     }//GEN-LAST:event_jPanel60MouseExited
 
     private void jPanel60MousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jPanel60MousePressed
@@ -2356,7 +2374,7 @@ public class GUI extends javax.swing.JFrame {
         jLabel52.setVisible(true);
         jLabel54.setForeground(new Color(93, 125, 204));
         ImageIcon icon = new ImageIcon(getClass().getResource("/facebook/simulator/images/Blue-Like.png"));
-        jLabel54.setIcon(icon); // TODO add your handling code here:
+        jLabel54.setIcon(icon);
     }//GEN-LAST:event_jPanel60MousePressed
 
     private void jLabel54MousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel54MousePressed
@@ -2366,7 +2384,7 @@ public class GUI extends javax.swing.JFrame {
         jLabel52.setVisible(true);
         jLabel54.setForeground(new Color(93, 125, 204));
         ImageIcon icon = new ImageIcon(getClass().getResource("/facebook/simulator/images/Blue-Like.png"));
-        jLabel54.setIcon(icon);   // TODO add your handling code here:
+        jLabel54.setIcon(icon);
     }//GEN-LAST:event_jLabel54MousePressed
 
     private void jLabel49MousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel49MousePressed
@@ -2376,54 +2394,52 @@ public class GUI extends javax.swing.JFrame {
         jLabel44.setVisible(true);
         jLabel49.setForeground(new Color(93, 125, 204));
         ImageIcon icon = new ImageIcon(getClass().getResource("/facebook/simulator/images/Blue-Like.png"));
-        jLabel49.setIcon(icon); // TODO add your handling code here:
+        jLabel49.setIcon(icon);
     }//GEN-LAST:event_jLabel49MousePressed
 
     private void jPanel57MouseMoved(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jPanel57MouseMoved
-        jPanel57.setBackground(new Color(249, 249, 249));  // TODO add your handling code here:
-        // TODO add your handling code here:
+        jPanel57.setBackground(new Color(249, 249, 249));
+
     }//GEN-LAST:event_jPanel57MouseMoved
 
     private void jButton1KeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_jButton1KeyPressed
-        // TODO add your handling code here:
+
     }//GEN-LAST:event_jButton1KeyPressed
 
     private void jLabel50MouseMoved(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel50MouseMoved
-        jPanel57.setBackground(new Color(249, 249, 249)); // TODO add your handling code here:
+        jPanel57.setBackground(new Color(249, 249, 249));
     }//GEN-LAST:event_jLabel50MouseMoved
 
     private void jPanel57MouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jPanel57MouseExited
-        jPanel57.setBackground(Color.white); // TODO add your handling code here:
+        jPanel57.setBackground(Color.white);
     }//GEN-LAST:event_jPanel57MouseExited
 
     private void jLabel50MouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel50MouseExited
-        jPanel57.setBackground(Color.white); // TODO add your handling code here:
+        jPanel57.setBackground(Color.white);
     }//GEN-LAST:event_jLabel50MouseExited
 
     private void jPanel58MouseMoved(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jPanel58MouseMoved
-        jPanel58.setBackground(new Color(249, 249, 249)); // TODO add your handling code here:
+        jPanel58.setBackground(new Color(249, 249, 249));
     }//GEN-LAST:event_jPanel58MouseMoved
 
     private void jLabel51MouseMoved(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel51MouseMoved
-        jPanel58.setBackground(new Color(249, 249, 249)); // TODO add your handling code here:
+        jPanel58.setBackground(new Color(249, 249, 249));
     }//GEN-LAST:event_jLabel51MouseMoved
 
     private void jLabel51MouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel51MouseExited
-        jPanel58.setBackground(Color.white); // TODO add your handling code here:
+        jPanel58.setBackground(Color.white);
     }//GEN-LAST:event_jLabel51MouseExited
 
     private void jPanel58MouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jPanel58MouseExited
-        jPanel58.setBackground(Color.white); // TODO add your handling code here:
+        jPanel58.setBackground(Color.white);
     }//GEN-LAST:event_jPanel58MouseExited
 
     private void jPanel14MouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jPanel14MouseExited
         jPanel14.setBackground(new Color(242, 244, 247));
-        // TODO add your handling code here:
     }//GEN-LAST:event_jPanel14MouseExited
 
     private void jPanel14MouseMoved(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jPanel14MouseMoved
         jPanel14.setBackground(new Color(249, 249, 249));
-        // TODO add your handling code here:
     }//GEN-LAST:event_jPanel14MouseMoved
 
     private void jPanel17MouseMoved(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jPanel17MouseMoved
@@ -2432,7 +2448,6 @@ public class GUI extends javax.swing.JFrame {
 
     private void jPanel17MouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jPanel17MouseExited
         jPanel17.setBackground(new Color(242, 244, 247));
-        // TODO add your handling code here:
     }//GEN-LAST:event_jPanel17MouseExited
 
     private void jPanel9MouseMoved(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jPanel9MouseMoved
@@ -2444,25 +2459,23 @@ public class GUI extends javax.swing.JFrame {
     }//GEN-LAST:event_jPanel9MouseExited
 
     private void jPanel11MouseMoved(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jPanel11MouseMoved
-        jPanel11.setBackground(new Color(249, 249, 249)); // TODO add your handling code here:
-        // TODO add your handling code here:
+        jPanel11.setBackground(new Color(249, 249, 249));
     }//GEN-LAST:event_jPanel11MouseMoved
 
     private void jPanel11MouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jPanel11MouseExited
         jPanel11.setBackground(new Color(242, 244, 247));
-        // TODO add your handling code here:
     }//GEN-LAST:event_jPanel11MouseExited
 
     private void jPanel12MouseMoved(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jPanel12MouseMoved
-        jPanel12.setBackground(new Color(249, 249, 249)); // TODO add your handling code here:
+        jPanel12.setBackground(new Color(249, 249, 249));
     }//GEN-LAST:event_jPanel12MouseMoved
 
     private void jPanel12MouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jPanel12MouseExited
-        jPanel12.setBackground(new Color(242, 244, 247)); // TODO add your handling code here:
+        jPanel12.setBackground(new Color(242, 244, 247));
     }//GEN-LAST:event_jPanel12MouseExited
 
     private void jPanel18MouseMoved(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jPanel18MouseMoved
-        jPanel18.setBackground(new Color(249, 249, 249));  // TODO add your handling code here:
+        jPanel18.setBackground(new Color(249, 249, 249));
     }//GEN-LAST:event_jPanel18MouseMoved
 
     private void jPanel18MouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jPanel18MouseExited
@@ -2470,108 +2483,90 @@ public class GUI extends javax.swing.JFrame {
     }//GEN-LAST:event_jPanel18MouseExited
 
     private void jTextField7jTextField1MouseMoved(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jTextField7jTextField1MouseMoved
-        // TODO add your handling code here:
     }//GEN-LAST:event_jTextField7jTextField1MouseMoved
 
     private void jTextField7jTextField1MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jTextField7jTextField1MouseClicked
-        // TODO add your handling code here:
     }//GEN-LAST:event_jTextField7jTextField1MouseClicked
 
     private void jTextField7jTextField1MouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jTextField7jTextField1MouseExited
-        // TODO add your handling code here:
     }//GEN-LAST:event_jTextField7jTextField1MouseExited
 
     private void jTextField7jTextField1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField7jTextField1ActionPerformed
-        // TODO add your handling code here:
     }//GEN-LAST:event_jTextField7jTextField1ActionPerformed
 
     private void jButton7jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton7jButton2ActionPerformed
-        // TODO add your handling code here:
     }//GEN-LAST:event_jButton7jButton2ActionPerformed
 
     private void jLabel58MouseMoved(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel58MouseMoved
-        // TODO add your handling code here:
     }//GEN-LAST:event_jLabel58MouseMoved
 
     private void jLabel58MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel58MouseClicked
-        // TODO add your handling code here:
     }//GEN-LAST:event_jLabel58MouseClicked
 
     private void jLabel58MouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel58MouseExited
-        // TODO add your handling code here:
     }//GEN-LAST:event_jLabel58MouseExited
 
     private void jLabel59MouseMoved(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel59MouseMoved
         jPanel64.setBackground(new Color(249, 249, 249));
         ImageIcon icon = new ImageIcon(getClass().getResource("/facebook/simulator/images/social-media (5).png"));
         jLabel59.setIcon(icon);
-// TODO add your handling code here:
     }//GEN-LAST:event_jLabel59MouseMoved
 
     private void jLabel59MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel59MouseClicked
-        FriendsList Fr = new FriendsList();
-        this.setVisible(false);
-        Fr.setVisible(true);        // TODO add your handling code here:
+//        FriendsList Fr = new FriendsList();
+//        this.setVisible(false);
+//        Fr.setVisible(true);
     }//GEN-LAST:event_jLabel59MouseClicked
 
     private void jLabel59MouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel59MouseExited
         jPanel64.setBackground(Color.white);
         ImageIcon icon = new ImageIcon(getClass().getResource("/facebook/simulator/images/social-media (3).png"));
-        jLabel59.setIcon(icon);// TODO add your handling code here:
+        jLabel59.setIcon(icon);
     }//GEN-LAST:event_jLabel59MouseExited
 
     private void jPanel64MouseMoved(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jPanel64MouseMoved
         jPanel64.setBackground(new Color(249, 249, 249));
         ImageIcon icon = new ImageIcon(getClass().getResource("/facebook/simulator/images/social-media (5).png"));
-        jLabel59.setIcon(icon);        // TODO add your handling code here:
+        jLabel59.setIcon(icon);
     }//GEN-LAST:event_jPanel64MouseMoved
 
     private void jPanel64MouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jPanel64MouseExited
         jPanel64.setBackground(Color.white);
         ImageIcon icon = new ImageIcon(getClass().getResource("/facebook/simulator/images/social-media (3).png"));
-        jLabel59.setIcon(icon);        // TODO add your handling code here:
+        jLabel59.setIcon(icon);
     }//GEN-LAST:event_jPanel64MouseExited
 
     private void jLabel60MouseMoved(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel60MouseMoved
-        // TODO add your handling code here:
     }//GEN-LAST:event_jLabel60MouseMoved
 
     private void jLabel60MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel60MouseClicked
-        // TODO add your handling code here:
     }//GEN-LAST:event_jLabel60MouseClicked
 
     private void jLabel60MouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel60MouseExited
-        // TODO add your handling code here:
     }//GEN-LAST:event_jLabel60MouseExited
 
     private void jLabel61MouseMoved(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel61MouseMoved
-        // TODO add your handling code here:
     }//GEN-LAST:event_jLabel61MouseMoved
 
     private void jLabel61MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel61MouseClicked
-        // TODO add your handling code here:
     }//GEN-LAST:event_jLabel61MouseClicked
 
     private void jLabel61MouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel61MouseExited
-        // TODO add your handling code here:
     }//GEN-LAST:event_jLabel61MouseExited
 
     private void jLabel62MouseMoved(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel62MouseMoved
-        // TODO add your handling code here:
     }//GEN-LAST:event_jLabel62MouseMoved
 
     private void jLabel62MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel62MouseClicked
-        // TODO add your handling code here:
     }//GEN-LAST:event_jLabel62MouseClicked
 
     private void jLabel62MouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel62MouseExited
-        // TODO add your handling code here:
     }//GEN-LAST:event_jLabel62MouseExited
 
     private void jPanel64MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jPanel64MouseClicked
-        FriendsList Fr = new FriendsList();
-        this.setVisible(false);
-        Fr.setVisible(true);// TODO add your handling code here:
+//        FriendsList Fr = new FriendsList();
+//        Fr.setVisible(true);
+//        this.setVisible(false);
     }//GEN-LAST:event_jPanel64MouseClicked
 
     private void jButton6ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton6ActionPerformed
@@ -2582,18 +2577,21 @@ public class GUI extends javax.swing.JFrame {
         jPanel2.setVisible(true);
         jLabel10.setText("Request accepted");
         jPanel46.setVisible(true);
-        ImageIcon icon=new ImageIcon(getClass().getResource("/facebook/simulator/images/User4pfp.png"));
+        ImageIcon icon = new ImageIcon(getClass().getResource("/facebook/simulator/images/User4pfp.png"));
         jLabel9.setIcon(icon);
         jLabel66.setText(User4.getName());
-// TODO add your handling code here:
     }//GEN-LAST:event_jButton6ActionPerformed
 
     private void jButton8ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton8ActionPerformed
         jButton6.setVisible(false);
         jButton8.setVisible(false);
         jPanel2.setVisible(true);
-        jLabel10.setText("Request deleted");        // TODO add your handling code here:
+        jLabel10.setText("Request deleted");
     }//GEN-LAST:event_jButton8ActionPerformed
+
+    private void jLabel66MouseMoved(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel66MouseMoved
+        jPanel46.setBackground(new Color(249, 249, 249));
+    }//GEN-LAST:event_jLabel66MouseMoved
     /**
      * @param args the command line arguments
      */
@@ -2716,6 +2714,7 @@ public class GUI extends javax.swing.JFrame {
     private javax.swing.JPanel jPanel46;
     private javax.swing.JPanel jPanel48;
     private javax.swing.JPanel jPanel49;
+    private javax.swing.JPanel jPanel5;
     private javax.swing.JPanel jPanel50;
     private javax.swing.JPanel jPanel51;
     private javax.swing.JPanel jPanel52;
