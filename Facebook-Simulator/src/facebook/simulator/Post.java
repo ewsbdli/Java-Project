@@ -3,13 +3,27 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
  */
 package facebook.simulator;
+
+import java.util.ArrayList;
+
 class Post extends Content implements Shares, Likes {
     private String textContent;
     private int likes;
+    private int share;
     PrivacySetting  PostPrivacy;
+    private ArrayList<Comment> comments;
+
+    public ArrayList<Comment> getComments() {
+        return comments;
+    }
+    
 
     public PrivacySetting getPostPrivacy() {
         return PostPrivacy;
+    }
+
+    public int getShare() {
+        return share;
     }
 
     public int getLikes() {
@@ -18,8 +32,6 @@ class Post extends Content implements Shares, Likes {
 
     public void setPostPrivacy(PrivacySetting PostPrivacy) {
         this.PostPrivacy = PostPrivacy;
-    }
-    public Post() {
     }
 
     public Post(String author, String timeCreats, String textContent) {
@@ -37,15 +49,8 @@ class Post extends Content implements Shares, Likes {
     }
 
     @Override
-    public void displayContent() {
-        System.out.println("Post by " + getAuthor() + " at " + gettimeCreats());
-        System.out.println("Content: " + textContent);
-        System.out.println("Likes: " + likes);
-    }
-
-    @Override
     public void share() {
-        System.out.println(getAuthor());
+        share++;
     }
 
     @Override

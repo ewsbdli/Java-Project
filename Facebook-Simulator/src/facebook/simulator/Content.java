@@ -32,10 +32,6 @@ abstract class Content {
         return timeCreats;
     }
 
-    public String gettimeCreats() {
-        return timeCreats;
-    }
 
-    public abstract void displayContent();
 }
 

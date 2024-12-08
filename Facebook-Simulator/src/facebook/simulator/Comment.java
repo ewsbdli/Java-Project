@@ -8,12 +8,20 @@ package facebook.simulator;
  *
  * @author pc
  */
-class Comment extends Post {
+class Comment extends Post implements Likes{
+    private int likes;
 
-    
-
-public Comment(String author, String timeCreats, String textContent) {
+    public Comment(int likes, String author, String timeCreats, String textContent) {
         super(author, timeCreats, textContent);
+        this.likes = likes;
     }
 
+    public int getLikes() {
+        return likes;
+    }
+
+ @Override
+    public void like() {
+        likes++;
+}
 }

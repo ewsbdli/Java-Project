@@ -9,15 +9,10 @@ class Story extends Content implements Shares {
     private String image;
     private String age = "24hour";
 
-    public Story(String contentId, String author, String timeCreats, String imageUrl) {
+    public Story(String author, String timeCreats, String age, String image) {
         super(author, timeCreats);
-        this.image = imageUrl;
-    }
-
-    @Override
-    public void displayContent() {
-        System.out.println("Story by " + getAuthor() + " at " + gettimeCreats());
-        System.out.println("Image: " + image);
+        this.image = image;
+        this.age = age;
     }
 
     @Override
