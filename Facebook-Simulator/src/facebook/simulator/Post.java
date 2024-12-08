@@ -7,16 +7,26 @@ package facebook.simulator;
 import java.util.ArrayList;
 
 class Post extends Content implements Shares, Likes {
+
     private String textContent;
     private int likes;
     private int share;
-    PrivacySetting  PostPrivacy;
+    PrivacySetting PostPrivacy;
     private ArrayList<Comment> comments;
+
+    public Post(String author, String timeCreats, String textContent) {
+        super(author, timeCreats);
+        this.textContent = textContent;
+        this.likes = 0;
+    }
 
     public ArrayList<Comment> getComments() {
         return comments;
     }
-    
+
+    public void setPostPrivacy(PrivacySetting PostPrivacy) {
+        this.PostPrivacy = PostPrivacy;
+    }
 
     public PrivacySetting getPostPrivacy() {
         return PostPrivacy;
@@ -30,22 +40,12 @@ class Post extends Content implements Shares, Likes {
         return likes;
     }
 
-    public void setPostPrivacy(PrivacySetting PostPrivacy) {
-        this.PostPrivacy = PostPrivacy;
-    }
-
-    public Post(String author, String timeCreats, String textContent) {
-        super(author, timeCreats);
+    public void setTextContent(String textContent) {
         this.textContent = textContent;
-        this.likes = 0;
     }
 
     public String getTextContent() {
         return textContent;
-    }
-
-    public void setTextContent(String textContent) {
-        this.textContent = textContent;
     }
 
     @Override
@@ -59,4 +59,3 @@ class Post extends Content implements Shares, Likes {
         //System.out.println("Post liked! Total likes: " + likes);
     }
 }
-
