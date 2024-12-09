@@ -430,6 +430,7 @@ public class GUI extends javax.swing.JFrame {
         jLabel13.setForeground(new java.awt.Color(51, 51, 51));
         jLabel13.setIcon(new javax.swing.ImageIcon(getClass().getResource("/facebook/simulator/images/friend (2).png"))); // NOI18N
         jLabel13.setText("  Friends");
+        jLabel13.setToolTipText("");
 
         javax.swing.GroupLayout jPanel19Layout = new javax.swing.GroupLayout(jPanel19);
         jPanel19.setLayout(jPanel19Layout);
@@ -741,6 +742,7 @@ public class GUI extends javax.swing.JFrame {
 
         jLabel39.setBackground(new java.awt.Color(0, 0, 0));
         jLabel39.setFont(new java.awt.Font("Segoe UI Semibold", 0, 18)); // NOI18N
+        User2.addFriend(Me);
         jLabel39.setText(User2.getName());
 
         javax.swing.GroupLayout jPanel45Layout = new javax.swing.GroupLayout(jPanel45);
@@ -920,6 +922,7 @@ public class GUI extends javax.swing.JFrame {
 
         jLabel41.setBackground(new java.awt.Color(0, 0, 0));
         jLabel41.setFont(new java.awt.Font("Segoe UI Semibold", 0, 18)); // NOI18N
+        User1.addFriend(Me);
         jLabel41.setText(User1.getName());
 
         javax.swing.GroupLayout jPanel50Layout = new javax.swing.GroupLayout(jPanel50);
@@ -964,6 +967,7 @@ public class GUI extends javax.swing.JFrame {
 
         jLabel43.setBackground(new java.awt.Color(0, 0, 0));
         jLabel43.setFont(new java.awt.Font("Segoe UI Semibold", 0, 18)); // NOI18N
+        User3.addFriend(Me);
         jLabel43.setText(User3.getName());
 
         javax.swing.GroupLayout jPanel51Layout = new javax.swing.GroupLayout(jPanel51);
@@ -1028,7 +1032,7 @@ public class GUI extends javax.swing.JFrame {
                 .addComponent(jLabel36)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addComponent(jPanel48, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(0, 37, Short.MAX_VALUE))
+                .addGap(0, 32, Short.MAX_VALUE))
         );
 
         jPanel10.setBackground(new java.awt.Color(242, 244, 247));
@@ -3013,7 +3017,7 @@ public class GUI extends javax.swing.JFrame {
                         .addContainerGap()
                         .addComponent(jPanel68, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jPanel4, javax.swing.GroupLayout.DEFAULT_SIZE, 810, Short.MAX_VALUE)
+                .addComponent(jPanel4, javax.swing.GroupLayout.DEFAULT_SIZE, 805, Short.MAX_VALUE)
                 .addGap(0, 0, 0))
         );
 
@@ -3521,6 +3525,9 @@ public class GUI extends javax.swing.JFrame {
     }//GEN-LAST:event_jPanel64MouseClicked
 
     private void jButton6ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton6ActionPerformed
+       int L= Me.getLimit();
+       int s= Me.getFriends().size();
+        if(s<L){
         User4.addFriend(Me);
         jButton6.setVisible(false);
         jButton8.setVisible(false);
@@ -3529,7 +3536,9 @@ public class GUI extends javax.swing.JFrame {
         jPanel46.setVisible(true);
         ImageIcon icon = new ImageIcon(getClass().getResource("/facebook/simulator/images/User4pfp.png"));
         jLabel9.setIcon(icon);
-        jLabel66.setText(User4.getName());
+        jLabel66.setText(User4.getName());}
+        else JOptionPane.showMessageDialog(this, "You cannot add more friends", "Error", JOptionPane.ERROR_MESSAGE);
+
     }//GEN-LAST:event_jButton6ActionPerformed
 
     private void jButton8ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton8ActionPerformed
@@ -3702,6 +3711,7 @@ public class GUI extends javax.swing.JFrame {
     }//GEN-LAST:event_jLabel50MouseClicked
 
     private void jTextField1MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jTextField1MouseClicked
+
         jTextField1.setText("");
         jTextField1.setForeground(Color.BLACK);
 // TODO add your handling code here:
@@ -3794,6 +3804,10 @@ jTextField3.setText("");
         USER.Me.addFriend(USER.User2);
         USER.Me.addFriend(USER.User3);
         //</editor-fold>
+        GUI userMe=new GUI();
+        userMe.Me.addFriend(userMe.User1);
+        userMe.Me.addFriend(userMe.User2);
+        userMe.Me.addFriend(userMe.User3);        
         /* Create and display the form */
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {

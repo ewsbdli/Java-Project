@@ -79,7 +79,7 @@
                       </Group>
                   </Group>
                   <EmptySpace max="-2" attributes="0"/>
-                  <Component id="jPanel4" pref="810" max="32767" attributes="0"/>
+                  <Component id="jPanel4" pref="805" max="32767" attributes="0"/>
                   <EmptySpace min="0" pref="0" max="-2" attributes="0"/>
               </Group>
           </Group>
@@ -487,6 +487,7 @@
                           <Image iconType="3" name="/facebook/simulator/images/friend (2).png"/>
                         </Property>
                         <Property name="text" type="java.lang.String" value="  Friends"/>
+                        <Property name="toolTipText" type="java.lang.String" value=""/>
                       </Properties>
                     </Component>
                   </SubComponents>
@@ -810,7 +811,7 @@
                           <Component id="jLabel36" min="-2" max="-2" attributes="0"/>
                           <EmptySpace type="unrelated" max="-2" attributes="0"/>
                           <Component id="jPanel48" min="-2" max="-2" attributes="0"/>
-                          <EmptySpace min="0" pref="37" max="32767" attributes="0"/>
+                          <EmptySpace min="0" pref="32" max="32767" attributes="0"/>
                       </Group>
                   </Group>
                 </DimensionLayout>
@@ -909,7 +910,7 @@
                         <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
                           <Color blue="0" green="0" red="0" type="rgb"/>
                         </Property>
-                        <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+                        <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor" postCode="User2.addFriend(Me);">
                           <Font name="Segoe UI Semibold" size="18" style="0"/>
                         </Property>
                         <Property name="text" type="java.lang.String" editor="org.netbeans.modules.form.RADConnectionPropertyEditor">
@@ -1124,7 +1125,9 @@
                             <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
                               <Color blue="99" green="99" red="99" type="rgb"/>
                             </Property>
-                            <Property name="text" type="java.lang.String" value="Request accepted"/>
+                            <Property name="text" type="java.lang.String" editor="org.netbeans.modules.form.RADConnectionPropertyEditor">
+                              <Connection code="&quot;Request accepted&quot;" type="code"/>
+                            </Property>
                           </Properties>
                         </Component>
                       </SubComponents>
@@ -1182,7 +1185,7 @@
                         <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
                           <Color blue="0" green="0" red="0" type="rgb"/>
                         </Property>
-                        <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+                        <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor" postCode="User1.addFriend(Me);">
                           <Font name="Segoe UI Semibold" size="18" style="0"/>
                         </Property>
                         <Property name="text" type="java.lang.String" editor="org.netbeans.modules.form.RADConnectionPropertyEditor">
@@ -1240,7 +1243,7 @@
                         <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
                           <Color blue="0" green="0" red="0" type="rgb"/>
                         </Property>
-                        <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+                        <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor" postCode="User3.addFriend(Me);">
                           <Font name="Segoe UI Semibold" size="18" style="0"/>
                         </Property>
                         <Property name="text" type="java.lang.String" editor="org.netbeans.modules.form.RADConnectionPropertyEditor">
