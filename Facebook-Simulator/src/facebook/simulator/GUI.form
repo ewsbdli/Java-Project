@@ -2258,6 +2258,10 @@
                                   <Color blue="ff" green="ff" red="ff" type="rgb"/>
                                 </Property>
                               </Properties>
+                              <Events>
+                                <EventHandler event="mouseMoved" listener="java.awt.event.MouseMotionListener" parameters="java.awt.event.MouseEvent" handler="jPanel62MouseMoved"/>
+                                <EventHandler event="mouseExited" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="jPanel62MouseExited"/>
+                              </Events>
 
                               <Layout>
                                 <DimensionLayout dim="0">
@@ -2296,6 +2300,10 @@
                                     </Property>
                                     <Property name="text" type="java.lang.String" value="Share"/>
                                   </Properties>
+                                  <Events>
+                                    <EventHandler event="mouseMoved" listener="java.awt.event.MouseMotionListener" parameters="java.awt.event.MouseEvent" handler="jLabel56MouseMoved"/>
+                                    <EventHandler event="mouseExited" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="jLabel56MouseExited"/>
+                                  </Events>
                                 </Component>
                               </SubComponents>
                             </Container>
@@ -2305,6 +2313,10 @@
                                   <Color blue="ff" green="ff" red="ff" type="rgb"/>
                                 </Property>
                               </Properties>
+                              <Events>
+                                <EventHandler event="mouseMoved" listener="java.awt.event.MouseMotionListener" parameters="java.awt.event.MouseEvent" handler="jPanel61MouseMoved"/>
+                                <EventHandler event="mouseExited" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="jPanel61MouseExited"/>
+                              </Events>
 
                               <Layout>
                                 <DimensionLayout dim="0">
@@ -2340,6 +2352,10 @@
                                     </Property>
                                     <Property name="text" type="java.lang.String" value="Comment"/>
                                   </Properties>
+                                  <Events>
+                                    <EventHandler event="mouseMoved" listener="java.awt.event.MouseMotionListener" parameters="java.awt.event.MouseEvent" handler="jLabel55MouseMoved"/>
+                                    <EventHandler event="mouseExited" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="jLabel55MouseExited"/>
+                                  </Events>
                                 </Component>
                               </SubComponents>
                             </Container>
