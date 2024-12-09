@@ -72,7 +72,6 @@ public class GUI extends javax.swing.JFrame {
         jPanel43 = new javax.swing.JPanel();
         jPanel44 = new javax.swing.JPanel();
         jLabel37 = new javax.swing.JLabel();
-        jLabel81 = new javax.swing.JLabel();
         jPanel45 = new javax.swing.JPanel();
         jLabel38 = new javax.swing.JLabel();
         jLabel39 = new javax.swing.JLabel();
@@ -710,13 +709,6 @@ public class GUI extends javax.swing.JFrame {
         jLabel37.setFont(new java.awt.Font("Arial", 1, 24)); // NOI18N
         jLabel37.setText("Friends");
 
-        Me.addFriend(userMe.User1);
-        Me.addFriend(userMe.User2);
-        Me.addFriend(userMe.User3);
-        jLabel81.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
-        int s=Me.getFriends().size();
-        jLabel81.setText(String.valueOf(s));
-
         javax.swing.GroupLayout jPanel44Layout = new javax.swing.GroupLayout(jPanel44);
         jPanel44.setLayout(jPanel44Layout);
         jPanel44Layout.setHorizontalGroup(
@@ -724,17 +716,13 @@ public class GUI extends javax.swing.JFrame {
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel44Layout.createSequentialGroup()
                 .addGap(5, 5, 5)
                 .addComponent(jLabel37)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jLabel81, javax.swing.GroupLayout.PREFERRED_SIZE, 43, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         jPanel44Layout.setVerticalGroup(
             jPanel44Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel44Layout.createSequentialGroup()
                 .addGap(18, 18, 18)
-                .addGroup(jPanel44Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jLabel81)
-                    .addComponent(jLabel37))
+                .addComponent(jLabel37)
                 .addContainerGap(15, Short.MAX_VALUE))
         );
 
@@ -1044,7 +1032,7 @@ public class GUI extends javax.swing.JFrame {
                 .addComponent(jLabel36)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addComponent(jPanel48, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(0, 30, Short.MAX_VALUE))
+                .addGap(0, 26, Short.MAX_VALUE))
         );
 
         jPanel10.setBackground(new java.awt.Color(242, 244, 247));
@@ -3024,15 +3012,12 @@ public class GUI extends javax.swing.JFrame {
             .addGroup(jPanel1Layout.createSequentialGroup()
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(jPanel59, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(jPanel49, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addGroup(jPanel1Layout.createSequentialGroup()
-                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(jPanel49, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addGroup(jPanel1Layout.createSequentialGroup()
-                                .addContainerGap()
-                                .addComponent(jPanel68, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)))
+                        .addContainerGap()
+                        .addComponent(jPanel68, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jPanel4, javax.swing.GroupLayout.DEFAULT_SIZE, 803, Short.MAX_VALUE)
+                .addComponent(jPanel4, javax.swing.GroupLayout.DEFAULT_SIZE, 799, Short.MAX_VALUE)
                 .addContainerGap())
         );
 
@@ -3543,7 +3528,6 @@ public class GUI extends javax.swing.JFrame {
     private void jButton6ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton6ActionPerformed
         int L = Me.getLimit();
         int s = Me.getFriends().size();
-        //jLabel81.setText(String.valueOf(s));
         if (s < L) {
             User4.addFriend(Me);
             jButton6.setVisible(false);
@@ -3558,7 +3542,6 @@ public class GUI extends javax.swing.JFrame {
             JOptionPane.showMessageDialog(this, "You cannot add more friends", "Error", JOptionPane.ERROR_MESSAGE);
         }
         int newSize = Me.getFriends().size();
-        jLabel81.setText(String.valueOf(newSize));
 
     }//GEN-LAST:event_jButton6ActionPerformed
 
@@ -3924,7 +3907,6 @@ public class GUI extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel79;
     private javax.swing.JLabel jLabel8;
     private javax.swing.JLabel jLabel80;
-    private javax.swing.JLabel jLabel81;
     private javax.swing.JLabel jLabel82;
     private javax.swing.JLabel jLabel83;
     private javax.swing.JLabel jLabel84;
