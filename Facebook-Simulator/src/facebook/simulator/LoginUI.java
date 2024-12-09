@@ -315,10 +315,11 @@ public class LoginUI extends javax.swing.JFrame {
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
         Login log = new Login();
         log.setEmail("Maha@gmail.com");
-        log.setPassword("123456789");
-        String name = jTextField1.getText();
+            log.setPassword("123456789");
+            String cEmail=log.getEmail().toLowerCase();
+        String name = jTextField1.getText().toLowerCase();
         String password = new String(jPasswordField1.getPassword());
-        if (log.getEmail().equals(name) && log.getPassword().equals(password)) {
+        if (cEmail.equals(name) && log.getPassword().equals(password)) {
             jButton1.setEnabled(true);
         } else {
             JOptionPane.showMessageDialog(this, "The email or password is incorrect.", "Error", JOptionPane.ERROR_MESSAGE);
@@ -331,6 +332,7 @@ public class LoginUI extends javax.swing.JFrame {
         GUI Home = new GUI();
         Home.setVisible(true);
         this.setVisible(false);
+       
         
     }//GEN-LAST:event_jButton1MouseClicked
 

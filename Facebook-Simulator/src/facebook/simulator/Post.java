@@ -14,10 +14,10 @@ class Post extends Content implements Shares, Likes {
     PrivacySetting PostPrivacy;
     private ArrayList<Comment> comments;
 
-    public Post(String author, String timeCreats, String textContent) {
+    public Post(String author, String timeCreats, String textContent,int likes) {
         super(author, timeCreats);
         this.textContent = textContent;
-        this.likes = 0;
+        this.likes =likes ;
     }
 
     public ArrayList<Comment> getComments() {
