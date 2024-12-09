@@ -14,19 +14,19 @@ import javax.swing.JOptionPane;
  * @author pc
  */
 public class GUI extends javax.swing.JFrame {
-    
+
     User Me = new User("Maha Mohamed");
     User User1 = new User("Marnie");
     User User2 = new User("Sawako");
     User User3 = new User("Rin Sohma");
     User User4 = new User("Shim Sooae");
     private int clickCount = 0;
-    
+
     public GUI() {
         initComponents();
         this.setIconImage(new ImageIcon(getClass().getResource("/facebook/simulator/images/facebook_icon.png")).getImage());
         this.setExtendedState(JFrame.MAXIMIZED_BOTH);
-        
+
     }
 
     /**
@@ -72,6 +72,7 @@ public class GUI extends javax.swing.JFrame {
         jPanel43 = new javax.swing.JPanel();
         jPanel44 = new javax.swing.JPanel();
         jLabel37 = new javax.swing.JLabel();
+        jLabel81 = new javax.swing.JLabel();
         jPanel45 = new javax.swing.JPanel();
         jLabel38 = new javax.swing.JLabel();
         jLabel39 = new javax.swing.JLabel();
@@ -709,6 +710,13 @@ public class GUI extends javax.swing.JFrame {
         jLabel37.setFont(new java.awt.Font("Arial", 1, 24)); // NOI18N
         jLabel37.setText("Friends");
 
+        Me.addFriend(userMe.User1);
+        Me.addFriend(userMe.User2);
+        Me.addFriend(userMe.User3);
+        jLabel81.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
+        int s=Me.getFriends().size();
+        jLabel81.setText(String.valueOf(s));
+
         javax.swing.GroupLayout jPanel44Layout = new javax.swing.GroupLayout(jPanel44);
         jPanel44.setLayout(jPanel44Layout);
         jPanel44Layout.setHorizontalGroup(
@@ -716,13 +724,17 @@ public class GUI extends javax.swing.JFrame {
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel44Layout.createSequentialGroup()
                 .addGap(5, 5, 5)
                 .addComponent(jLabel37)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(jLabel81, javax.swing.GroupLayout.PREFERRED_SIZE, 43, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         jPanel44Layout.setVerticalGroup(
             jPanel44Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel44Layout.createSequentialGroup()
                 .addGap(18, 18, 18)
-                .addComponent(jLabel37)
+                .addGroup(jPanel44Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(jLabel81)
+                    .addComponent(jLabel37))
                 .addContainerGap(15, Short.MAX_VALUE))
         );
 
@@ -1032,7 +1044,7 @@ public class GUI extends javax.swing.JFrame {
                 .addComponent(jLabel36)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addComponent(jPanel48, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(0, 32, Short.MAX_VALUE))
+                .addGap(0, 30, Short.MAX_VALUE))
         );
 
         jPanel10.setBackground(new java.awt.Color(242, 244, 247));
@@ -3012,13 +3024,16 @@ public class GUI extends javax.swing.JFrame {
             .addGroup(jPanel1Layout.createSequentialGroup()
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(jPanel59, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(jPanel49, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addGroup(jPanel1Layout.createSequentialGroup()
-                        .addContainerGap()
-                        .addComponent(jPanel68, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(jPanel49, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addGroup(jPanel1Layout.createSequentialGroup()
+                                .addContainerGap()
+                                .addComponent(jPanel68, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jPanel4, javax.swing.GroupLayout.DEFAULT_SIZE, 805, Short.MAX_VALUE)
-                .addGap(0, 0, 0))
+                .addComponent(jPanel4, javax.swing.GroupLayout.DEFAULT_SIZE, 803, Short.MAX_VALUE)
+                .addContainerGap())
         );
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
@@ -3094,14 +3109,14 @@ public class GUI extends javax.swing.JFrame {
     }//GEN-LAST:event_jPanel7MouseMoved
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
-        
+
         Post P1 = new Post(Me.getName(), "Just now", jTextField2.getText(), 0);
         String def = jTextField2.getText();
         if (def.equals("What's on your mind?") || def.isEmpty()) {
             JOptionPane.showMessageDialog(this, "Please write something to post it!");
         } else {
             if (!def.equals("What's on your mind?")) {
-                
+
                 clickCount++;
                 if (clickCount == 1) {
                     P1.setAuthor(Me.getName());
@@ -3111,7 +3126,7 @@ public class GUI extends javax.swing.JFrame {
                         P1.setPostPrivacy(PrivacySetting.PUBLIC);
                         ImageIcon icon = new ImageIcon(getClass().getResource("/facebook/simulator/images/public.png"));
                         jLabel22.setIcon(icon);
-                        
+
                     } else if (jRadioButton3.isSelected()) {
                         P1.setPostPrivacy(PrivacySetting.FRIENDS_ONLY);
                         ImageIcon icon = new ImageIcon(getClass().getResource("/facebook/simulator/images/friends.png"));
@@ -3134,7 +3149,7 @@ public class GUI extends javax.swing.JFrame {
                         P1.setPostPrivacy(PrivacySetting.PUBLIC);
                         ImageIcon icon = new ImageIcon(getClass().getResource("/facebook/simulator/images/public.png"));
                         jLabel8.setIcon(icon);
-                        
+
                     } else if (jRadioButton3.isSelected()) {
                         P1.setPostPrivacy(PrivacySetting.FRIENDS_ONLY);
                         ImageIcon icon = new ImageIcon(getClass().getResource("/facebook/simulator/images/friends.png"));
@@ -3146,7 +3161,7 @@ public class GUI extends javax.swing.JFrame {
                         jPanel57.setVisible(false);
                     }
                     jPanel55.setVisible(true);
-                    
+
                 }
             }
         }
@@ -3154,7 +3169,7 @@ public class GUI extends javax.swing.JFrame {
 
     private void jPanel27MouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jPanel27MouseExited
         jPanel27.setBackground(new Color(255, 255, 255));
-        
+
 
     }//GEN-LAST:event_jPanel27MouseExited
 
@@ -3524,20 +3539,26 @@ public class GUI extends javax.swing.JFrame {
 //        this.setVisible(false);
     }//GEN-LAST:event_jPanel64MouseClicked
 
+
     private void jButton6ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton6ActionPerformed
-       int L= Me.getLimit();
-       int s= Me.getFriends().size();
-        if(s<L){
-        User4.addFriend(Me);
-        jButton6.setVisible(false);
-        jButton8.setVisible(false);
-        jPanel2.setVisible(true);
-        jLabel10.setText("Request accepted");
-        jPanel46.setVisible(true);
-        ImageIcon icon = new ImageIcon(getClass().getResource("/facebook/simulator/images/User4pfp.png"));
-        jLabel9.setIcon(icon);
-        jLabel66.setText(User4.getName());}
-        else JOptionPane.showMessageDialog(this, "You cannot add more friends", "Error", JOptionPane.ERROR_MESSAGE);
+        int L = Me.getLimit();
+        int s = Me.getFriends().size();
+        //jLabel81.setText(String.valueOf(s));
+        if (s < L) {
+            User4.addFriend(Me);
+            jButton6.setVisible(false);
+            jButton8.setVisible(false);
+            jPanel2.setVisible(true);
+            jLabel10.setText("Request accepted");
+            jPanel46.setVisible(true);
+            ImageIcon icon = new ImageIcon(getClass().getResource("/facebook/simulator/images/User4pfp.png"));
+            jLabel9.setIcon(icon);
+            jLabel66.setText(User4.getName());
+        } else {
+            JOptionPane.showMessageDialog(this, "You cannot add more friends", "Error", JOptionPane.ERROR_MESSAGE);
+        }
+        int newSize = Me.getFriends().size();
+        jLabel81.setText(String.valueOf(newSize));
 
     }//GEN-LAST:event_jButton6ActionPerformed
 
@@ -3726,7 +3747,6 @@ public class GUI extends javax.swing.JFrame {
         jPanel22.setVisible(true);
         jTextField1.setText("Write comment...");
         jTextField1.setForeground(new Color(204, 204, 204));
-       
 
 // TODO add your handling code here:
     }//GEN-LAST:event_jButton2ActionPerformed
@@ -3771,7 +3791,7 @@ public class GUI extends javax.swing.JFrame {
     }//GEN-LAST:event_jLabel82MousePressed
 
     private void jTextField3MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jTextField3MouseClicked
-jTextField3.setText("");
+        jTextField3.setText("");
         jTextField3.setForeground(Color.BLACK);        // TODO add your handling code here:
     }//GEN-LAST:event_jTextField3MouseClicked
     /**
@@ -3804,16 +3824,16 @@ jTextField3.setText("");
         USER.Me.addFriend(USER.User2);
         USER.Me.addFriend(USER.User3);
         //</editor-fold>
-        GUI userMe=new GUI();
-        userMe.Me.addFriend(userMe.User1);
-        userMe.Me.addFriend(userMe.User2);
-        userMe.Me.addFriend(userMe.User3);        
+       
+        
+    
         /* Create and display the form */
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
                 new GUI().setVisible(true);
             }
         });
+            
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
@@ -3904,6 +3924,7 @@ jTextField3.setText("");
     private javax.swing.JLabel jLabel79;
     private javax.swing.JLabel jLabel8;
     private javax.swing.JLabel jLabel80;
+    private javax.swing.JLabel jLabel81;
     private javax.swing.JLabel jLabel82;
     private javax.swing.JLabel jLabel83;
     private javax.swing.JLabel jLabel84;
