@@ -7,7 +7,7 @@ package facebook.simulator;
 import java.util.Scanner;
 
 public class Login {
-
+    
     private String Email;
     private String password;
 
