@@ -5,7 +5,7 @@ import java.util.ArrayList;
 class User {
 
     private String name; 
-    private int limit=4;
+    private int limit=5;
     private ArrayList<User> friends;
 
     public User(String name) {
