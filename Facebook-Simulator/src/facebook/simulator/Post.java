@@ -32,6 +32,10 @@ class Post extends Content implements Shares, Likes {
         return PostPrivacy;
     }
 
+    public void setShare(int share) {
+        this.share = share;
+    }
+
     public int getShare() {
         return share;
     }
