@@ -1,9 +1,7 @@
-
 package facebook.simulator;
 
 import javax.swing.JFrame;
 import javax.swing.JOptionPane;
-
 
 public class LoginUI extends javax.swing.JFrame {
 
@@ -286,12 +284,10 @@ public class LoginUI extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void jTextField1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField1ActionPerformed
-        
+
     }//GEN-LAST:event_jTextField1ActionPerformed
 
     private void jTextField1MouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jTextField1MouseExited
-  
-
 
 
     }//GEN-LAST:event_jTextField1MouseExited
@@ -299,46 +295,44 @@ public class LoginUI extends javax.swing.JFrame {
     private void jTextField1MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jTextField1MouseClicked
         jTextField1.setText("");
         jTextField1.setForeground(new java.awt.Color(0, 0, 0));
-        
+
     }//GEN-LAST:event_jTextField1MouseClicked
 
     private void jTextField1MouseMoved(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jTextField1MouseMoved
-       
+
     }//GEN-LAST:event_jTextField1MouseMoved
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
         Login log = new Login();
         log.setEmail("Maha@gmail.com");
-            log.setPassword("123456789");
-            String cEmail=log.getEmail().toLowerCase();
+        log.setPassword("123456789");
+        String cEmail = log.getEmail().toLowerCase();
         String name = jTextField1.getText().toLowerCase();
         String password = new String(jPasswordField1.getPassword());
         if (cEmail.equals(name) && log.getPassword().equals(password)) {
-            jButton1.setEnabled(true);
+            GUI Home = new GUI();
+            Home.setVisible(true);
+            this.setVisible(false);
         } else {
             JOptionPane.showMessageDialog(this, "The email or password is incorrect.", "Error", JOptionPane.ERROR_MESSAGE);
-            
+
         }
 
     }//GEN-LAST:event_jButton1ActionPerformed
 
     private void jButton1MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jButton1MouseClicked
-        GUI Home = new GUI();
-        Home.setVisible(true);
-        this.setVisible(false);
-       
-        
+
     }//GEN-LAST:event_jButton1MouseClicked
 
     private void jTextField1MouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jTextField1MouseEntered
-        
+
     }//GEN-LAST:event_jTextField1MouseEntered
 
     private void jPasswordField1MouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jPasswordField1MouseEntered
     }//GEN-LAST:event_jPasswordField1MouseEntered
 
     private void jPasswordField1MouseMoved(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jPasswordField1MouseMoved
-     
+
     }//GEN-LAST:event_jPasswordField1MouseMoved
 
     /**

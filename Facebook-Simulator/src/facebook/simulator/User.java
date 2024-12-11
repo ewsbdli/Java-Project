@@ -12,6 +12,7 @@ class User {
     public User(String name) {
         this.name = name;
         this.friends = new ArrayList<>();
+        this.posts= new ArrayList<>();
     }
 
     public void addFriend(User friend) {

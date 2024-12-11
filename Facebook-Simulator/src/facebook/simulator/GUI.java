@@ -21,16 +21,16 @@ public class GUI extends javax.swing.JFrame {
     User User3 = new User("Rin Sohma");
     User User4 = new User("Shim Sooae");
     User User5 = new User("Malak");
-    Post P6 = new Post(User1.getName(),"50m","In love with Sakura blossoms.", 0);
+    Post P6 = new Post(User1.getName(), "50m", "In love with Sakura blossoms.", 0);
     private int clickCount = 0;
-    
-    
+
     public GUI() {
         initComponents();
         this.setIconImage(new ImageIcon(getClass().getResource("/facebook/simulator/images/facebook_icon.png")).getImage());
         this.setExtendedState(JFrame.MAXIMIZED_BOTH);
-        
+
     }
+
     /**
      * This method is called from within the constructor to initialize the form.
      * WARNING: Do NOT modify this code. The content of this method is always
@@ -707,7 +707,7 @@ public class GUI extends javax.swing.JFrame {
                 .addComponent(jPanel12, javax.swing.GroupLayout.PREFERRED_SIZE, 58, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(jPanel18, javax.swing.GroupLayout.PREFERRED_SIZE, 58, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(150, Short.MAX_VALUE))
+                .addContainerGap(153, Short.MAX_VALUE))
         );
 
         jSeparator2.setForeground(new java.awt.Color(255, 255, 255));
@@ -1823,7 +1823,7 @@ public class GUI extends javax.swing.JFrame {
         jLabel52.setIcon(new javax.swing.ImageIcon(getClass().getResource("/facebook/simulator/images/Like.png"))); // NOI18N
 
         jLabel53.setFont(new java.awt.Font("Segoe UI", 1, 16)); // NOI18N
-        jLabel53.setText(P6.getTimeCreats());
+        jLabel53.setText(P6.getTextContent());
 
         jPanel5.setBackground(new java.awt.Color(255, 255, 255));
 
@@ -1992,7 +1992,7 @@ public class GUI extends javax.swing.JFrame {
         jLabel92.setForeground(new java.awt.Color(153, 153, 153));
 
         jLabel71.setForeground(new java.awt.Color(153, 153, 153));
-        jLabel71.setText("1 Comments");
+        jLabel71.setText("1 Comment");
         jLabel71.setVisible(true);
         jLabel71.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
@@ -2153,17 +2153,11 @@ public class GUI extends javax.swing.JFrame {
         jPanel71.setLayout(jPanel71Layout);
         jPanel71Layout.setHorizontalGroup(
             jPanel71Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel71Layout.createSequentialGroup()
-                .addGap(20, 20, 20)
-                .addComponent(jLabel68, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(20, 20, 20))
+            .addComponent(jLabel68, javax.swing.GroupLayout.PREFERRED_SIZE, 131, javax.swing.GroupLayout.PREFERRED_SIZE)
         );
         jPanel71Layout.setVerticalGroup(
             jPanel71Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel71Layout.createSequentialGroup()
-                .addContainerGap()
-                .addComponent(jLabel68, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addContainerGap())
+            .addComponent(jLabel68, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
         );
 
         jPanel72.setBackground(new java.awt.Color(255, 255, 255));
@@ -2246,7 +2240,7 @@ public class GUI extends javax.swing.JFrame {
         );
         jPanel73Layout.setVerticalGroup(
             jPanel73Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jLabel70, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+            .addComponent(jLabel70, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, 44, Short.MAX_VALUE)
         );
 
         jLabel91.setVisible(false);
@@ -2262,7 +2256,7 @@ public class GUI extends javax.swing.JFrame {
                     .addGroup(jPanel69Layout.createSequentialGroup()
                         .addGroup(jPanel69Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
                             .addGroup(jPanel69Layout.createSequentialGroup()
-                                .addGap(0, 0, Short.MAX_VALUE)
+                                .addGap(60, 60, 60)
                                 .addComponent(jPanel73, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                             .addComponent(jPanel29, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                             .addComponent(jSeparator8))
@@ -2276,7 +2270,7 @@ public class GUI extends javax.swing.JFrame {
                                 .addComponent(jLabel93, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                             .addGroup(jPanel69Layout.createSequentialGroup()
                                 .addComponent(jPanel71, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addGap(56, 56, 56)
+                                .addGap(60, 60, 60)
                                 .addComponent(jPanel72, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
                         .addGap(48, 48, 48))))
             .addGroup(jPanel69Layout.createSequentialGroup()
@@ -3442,7 +3436,7 @@ public class GUI extends javax.swing.JFrame {
                         .addContainerGap()
                         .addComponent(jPanel68, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
                 .addGap(0, 0, 0)
-                .addComponent(jPanel4, javax.swing.GroupLayout.DEFAULT_SIZE, 806, Short.MAX_VALUE))
+                .addComponent(jPanel4, javax.swing.GroupLayout.DEFAULT_SIZE, 809, Short.MAX_VALUE))
         );
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
@@ -3520,16 +3514,18 @@ public class GUI extends javax.swing.JFrame {
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
         Post P1 = new Post(Me.getName(), "Just now", jTextField2.getText(), 0);
         String def = jTextField2.getText();
+        //---------------------------------------------CHECK IF THE POST IS NOT EMPTY!
         if (def.equals("What's on your mind?") || def.isEmpty()) {
             JOptionPane.showMessageDialog(this, "Please write something to post it!");
         } else {
             if (!def.equals("What's on your mind?")) {
-
+                //----------------------------------FIRST POST FOR USER (ME)
                 clickCount++;
                 if (clickCount == 1) {
                     P1.setAuthor(Me.getName());
                     P1.setTextContent(jTextField2.getText());
                     jLabel11.setText(jTextField2.getText());
+                    //---------------------------------POST PRIVACY SETTING CHECK
                     if (jRadioButton2.isSelected()) {
                         P1.setPostPrivacy(PrivacySetting.PUBLIC);
                         ImageIcon icon = new ImageIcon(getClass().getResource("/facebook/simulator/images/public.png"));
@@ -3541,15 +3537,18 @@ public class GUI extends javax.swing.JFrame {
                     }
                     jLabel19.setText(P1.getAuthor());
                     jLabel22.setText(P1.getTimeCreats());
+                    //---------------------------------------CHECK FOR POST COMMENTS (ALLOW COMMENTS OR NOT)
                     if (!jRadioButton1.isSelected()) {
                         jPanel72.setVisible(false);
                     }
-                    jPanel69.setVisible(true);
+                    jPanel69.setVisible(true);//SHOW POST PANEL
+                    Me.addPost(P1); //ADDING POST TO ARRAY LIST(LOOK AT POST CLASS)
                     jTextField2.setForeground(new Color(153, 153, 153));
                     jTextField2.setText("What's on your mind?");
-                    //--------------------------------------------------------------------
+
+                    //-----------------------------------------SECOND POST WITH SAME STEPS:D
                 } else if (clickCount == 2) {
-                     Post P2 = new Post(Me.getName(), "Just now", jTextField2.getText(), 0);
+                    Post P2 = new Post(Me.getName(), "Just now", jTextField2.getText(), 0);
                     P2.setAuthor(Me.getName());
                     P2.setTextContent(jTextField2.getText());
                     jLabel1.setText(jTextField2.getText());
@@ -3562,7 +3561,6 @@ public class GUI extends javax.swing.JFrame {
                         P2.setPostPrivacy(PrivacySetting.FRIENDS_ONLY);
                         ImageIcon icon = new ImageIcon(getClass().getResource("/facebook/simulator/images/friends.png"));
                         jLabel8.setIcon(icon);
-                    
 
                     }
                     jLabel7.setText(P2.getAuthor());
@@ -3571,10 +3569,13 @@ public class GUI extends javax.swing.JFrame {
                         jPanel57.setVisible(false);
                     }
                     jPanel55.setVisible(true);
+                    Me.addPost(P2);
+                    jTextField2.setForeground(new Color(153, 153, 153));
+                    jTextField2.setText("What's on your mind?");
 
                 }
             }
-            
+
         }
     }//GEN-LAST:event_jButton1ActionPerformed
 
@@ -3760,10 +3761,9 @@ public class GUI extends javax.swing.JFrame {
     }//GEN-LAST:event_jPanel60MousePressed
 
     private void jLabel54MousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel54MousePressed
-
-       Post P1 = new Post(Me.getName(), jLabel8.getText(), jLabel1.getText(), 0);
-        P1.like();
-        jLabel52.setText(String.valueOf(P1.getLikes()));
+        //-----------------LIKED USER1 POST
+        P6.like();
+        jLabel52.setText(String.valueOf(P6.getLikes()));
         jLabel52.setVisible(true);
         jLabel54.setForeground(new Color(93, 125, 204));
         ImageIcon icon = new ImageIcon(getClass().getResource("/facebook/simulator/images/Blue-Like.png"));
@@ -3771,7 +3771,8 @@ public class GUI extends javax.swing.JFrame {
     }//GEN-LAST:event_jLabel54MousePressed
 
     private void jLabel49MousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel49MousePressed
-        Post P1 = new Post(Me.getName(), jLabel8.getText(), jLabel1.getText(), 0);
+       //--------------------------LIKED MY FIRST POST
+        Post P1 = Me.getPosts().get(1);
         P1.like();
         jLabel44.setText(String.valueOf(P1.getLikes()));
         jLabel44.setVisible(true);
@@ -3935,8 +3936,10 @@ public class GUI extends javax.swing.JFrame {
 
 
     private void jButton6ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton6ActionPerformed
-        int L = Me.getLimit();
+        //---------------------------ACCEPT FRIEND REQUESTS 
+        int L = Me.getLimit();  //FRIENDS LIMIT
         int s = Me.getFriends().size();
+        //--------------------------CHECKING IF FRIENDS ARRAY LIST LESS THAN LIMIT(4 FRIENDS)
         if (s < L) {
             User4.addFriend(Me);
             jButton6.setVisible(false);
@@ -3954,6 +3957,7 @@ public class GUI extends javax.swing.JFrame {
     }//GEN-LAST:event_jButton6ActionPerformed
 
     private void jButton8ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton8ActionPerformed
+        //--------------------------------DELETE FRIEND REQUEST
         jButton6.setVisible(false);
         jButton8.setVisible(false);
         jLabel10.setText("Request deleted");
@@ -3978,17 +3982,17 @@ public class GUI extends javax.swing.JFrame {
     }//GEN-LAST:event_jLabel68MouseExited
 
     private void jLabel68MousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel68MousePressed
-         Post P1 = new Post(Me.getName(), jLabel8.getText(), jLabel1.getText(), 0);
-        P1.like();
-        jLabel67.setText(String.valueOf(P1.getLikes()));
+       //-----------------------------LIKED MY SECOND POST 
+        Post P2 = Me.getPosts().get(0);
+        P2.like();
+        jLabel67.setText(String.valueOf(P2.getLikes()));
         jLabel67.setVisible(true);
         jLabel68.setForeground(new Color(93, 125, 204));
         ImageIcon icon = new ImageIcon(getClass().getResource("/facebook/simulator/images/Blue-Like.png"));
-        jLabel68.setIcon(icon);        // TODO add your handling code here:
+        jLabel68.setIcon(icon);    
     }//GEN-LAST:event_jLabel68MousePressed
 
     private void jPanel71MouseMoved(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jPanel71MouseMoved
-        jPanel71.setBackground(new Color(249, 249, 249)); // TODO add your handling code here:
     }//GEN-LAST:event_jPanel71MouseMoved
 
     private void jPanel71MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jPanel71MouseClicked
@@ -3996,7 +4000,6 @@ public class GUI extends javax.swing.JFrame {
     }//GEN-LAST:event_jPanel71MouseClicked
 
     private void jPanel71MouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jPanel71MouseExited
-        jPanel71.setBackground(new Color(255, 255, 255));        // TODO add your handling code here:
     }//GEN-LAST:event_jPanel71MouseExited
 
     private void jPanel71MousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jPanel71MousePressed
@@ -4012,11 +4015,11 @@ public class GUI extends javax.swing.JFrame {
     }//GEN-LAST:event_jLabel69MouseExited
 
     private void jPanel72MouseMoved(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jPanel72MouseMoved
-        jPanel72.setBackground(new Color(249, 249, 249));     
+        jPanel72.setBackground(new Color(249, 249, 249));
     }//GEN-LAST:event_jPanel72MouseMoved
 
     private void jPanel72MouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jPanel72MouseExited
-        jPanel72.setBackground(Color.white);       
+        jPanel72.setBackground(Color.white);
     }//GEN-LAST:event_jPanel72MouseExited
 
     private void jLabel70MouseMoved(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel70MouseMoved
@@ -4096,25 +4099,24 @@ public class GUI extends javax.swing.JFrame {
     }//GEN-LAST:event_jTextField3ActionPerformed
 
     private void jLabel55MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel55MouseClicked
-         jPanel42.setVisible(true);
+        //ADDING USER3 COMMENT ON USER1 POST 
+        jPanel42.setVisible(true);
         jPanel80.setVisible(true);
-        Comment P1 = new Comment(User3.getName(), "30m", "Nice view", 0);
+        Comment User3Comment = new Comment(User3.getName(), "30m", "Nice view", 0);
         ImageIcon icon = new ImageIcon(getClass().getResource("/facebook/simulator/images/User3.png"));
         jLabel103.setIcon(icon);
-        jLabel107.setText(" " + P1.getTextContent());
-        jLabel108.setText(" " + P1.getAuthor());
-        jLabel105.setText(P1.getTimeCreats());
-        P6.addComment(P1);
+        jLabel107.setText(" " + User3Comment.getTextContent());
+        jLabel108.setText(" " + User3Comment.getAuthor());
+        jLabel105.setText(User3Comment.getTimeCreats());
+        P6.addComment(User3Comment);
         jPanel42.setVisible(true);
         jPanel80.setVisible(true);
 
-// TODO add your handling code here:
     }//GEN-LAST:event_jLabel55MouseClicked
 
     private void jLabel50MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel50MouseClicked
         jPanel21.setVisible(true);
 
-        // TODO add your handling code here:
     }//GEN-LAST:event_jLabel50MouseClicked
 
     private void jTextField1MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jTextField1MouseClicked
@@ -4124,34 +4126,38 @@ public class GUI extends javax.swing.JFrame {
     }//GEN-LAST:event_jTextField1MouseClicked
 
     private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
+        //ADDING COMMENT ON MY SECOND POST 
+        Post P2 = Me.getPosts().get(1);
         String comment = jTextField1.getText();
-        Comment first = new Comment(Me.getName(), "Just now", comment, 0);
-        jLabel75.setText("  " + first.getTextContent());
-        jLabel76.setText(" " + first.getAuthor());
-        jLabel78.setText(first.getTimeCreats());
+        Comment CommentOnMyPost = new Comment(Me.getName(), "Just now", comment, 0);
+        jLabel75.setText("  " + CommentOnMyPost.getTextContent());
+        jLabel76.setText(" " + CommentOnMyPost.getAuthor());
+        jLabel78.setText(CommentOnMyPost.getTimeCreats());
+        P2.addComment(CommentOnMyPost);
         jPanel22.setVisible(true);
         jTextField1.setText("Write comment...");
         jTextField1.setForeground(new Color(204, 204, 204));
 
-// TODO add your handling code here:
     }//GEN-LAST:event_jButton2ActionPerformed
 
     private void jLabel77MousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel77MousePressed
+        //--------------------------------LIKED MY COMMENT ON MY SECOND POST
+        Post P2 = Me.getPosts().get(1);
+        Comment CommentOnMyPost = P2.getComments().get(0);
         jLabel77.setForeground(new Color(93, 125, 204));
-        String comment = jTextField1.getText();
-        Comment first = new Comment(Me.getName(), "Just now", comment, 0);
-        first.like();
-        jLabel74.setText(String.valueOf(first.getLikes()));
+        CommentOnMyPost.like();
+        jLabel74.setText(String.valueOf(CommentOnMyPost.getLikes()));
         jLabel74.setVisible(true);
-        // TODO add your handling code here:
     }//GEN-LAST:event_jLabel77MousePressed
 
     private void jButton3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton3ActionPerformed
+        Post P1 = Me.getPosts().get(0);
         String comment = jTextField3.getText();
-        Comment first = new Comment(Me.getName(), "Just now", comment, 0);
-        jLabel26.setText("  " + first.getTextContent());
-        jLabel34.setText(" " + first.getAuthor());
-        jLabel83.setText(first.getTimeCreats());
+        Comment Myfirst = new Comment(Me.getName(), "Just now", comment, 0);
+        jLabel26.setText("  " + Myfirst.getTextContent());
+        jLabel34.setText(" " + Myfirst.getAuthor());
+        jLabel83.setText(Myfirst.getTimeCreats());
+        P1.addComment(Myfirst);
         jPanel41.setVisible(true);
         jTextField3.setText("Write comment...");
         jTextField3.setForeground(new Color(204, 204, 204));
@@ -4167,12 +4173,13 @@ public class GUI extends javax.swing.JFrame {
     }//GEN-LAST:event_jLabel69MouseClicked
 
     private void jLabel82MousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel82MousePressed
+        //----------------------------------LIKED MY COMMENT ON MY FIRST POST
+        Post P1 = Me.getPosts().get(0);
+        Comment Myfirst = P1.getComments().get(0);
         jLabel82.setForeground(new Color(93, 125, 204));
-        String comment = jTextField1.getText();
-        Comment first = new Comment(Me.getName(), "Just now", comment, 0);
-        first.like();
-        jLabel86.setText(String.valueOf(first.getLikes()));
-        jLabel86.setVisible(true);        // TODO add your handling code here:
+        Myfirst.like();
+        jLabel86.setText(String.valueOf(Myfirst.getLikes()));
+        jLabel86.setVisible(true);
     }//GEN-LAST:event_jLabel82MousePressed
 
     private void jTextField3MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jTextField3MouseClicked
@@ -4181,8 +4188,10 @@ public class GUI extends javax.swing.JFrame {
     }//GEN-LAST:event_jTextField3MouseClicked
 
     private void jButton9ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton9ActionPerformed
-        int L = Me.getLimit();
+        //---------------------------ACCEPT FRIEND REQUESTS 
+        int L = Me.getLimit();//
         int s = Me.getFriends().size();
+        //--------------------------CHECKING IF FRIENDS ARRAY LIST LESS THAN LIMIT(4 FRIENDS)
         if (s < L) {
             User5.addFriend(Me);
             jButton9.setVisible(false);
@@ -4193,57 +4202,55 @@ public class GUI extends javax.swing.JFrame {
             ImageIcon icon = new ImageIcon(getClass().getResource("/facebook/simulator/images/Malak40px.png"));
             jLabel89.setIcon(icon);
             jLabel90.setText(User5.getName());
-        } else {
+        } //IF THE LIMIT FOR ADDING FRIENDS IS EXCEEDED
+        else {
             JOptionPane.showMessageDialog(this, "You cannot add more friends", "Error", JOptionPane.ERROR_MESSAGE);
-        }        // TODO add your handling code here:
+        }
     }//GEN-LAST:event_jButton9ActionPerformed
 
     private void jButton10ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton10ActionPerformed
-        // TODO add your handling code here:
     }//GEN-LAST:event_jButton10ActionPerformed
 
     private void jPanel74MouseMoved(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jPanel74MouseMoved
-        // TODO add your handling code here:
     }//GEN-LAST:event_jPanel74MouseMoved
 
     private void jPanel74MouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jPanel74MouseExited
-        // TODO add your handling code here:
     }//GEN-LAST:event_jPanel74MouseExited
 
     private void jLabel90MouseMoved(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel90MouseMoved
-        // TODO add your handling code here:
     }//GEN-LAST:event_jLabel90MouseMoved
 
     private void jPanel75MouseMoved(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jPanel75MouseMoved
-        jPanel75.setBackground(new Color(249, 249, 249)); // TODO add your handling code here:
+        jPanel75.setBackground(new Color(249, 249, 249));
     }//GEN-LAST:event_jPanel75MouseMoved
 
     private void jPanel75MouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jPanel75MouseExited
-        jPanel75.setBackground(new Color(242, 244, 247)); // TODO add your handling code here:
+        jPanel75.setBackground(new Color(242, 244, 247));
     }//GEN-LAST:event_jPanel75MouseExited
 
     private void jLabel51MousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel51MousePressed
-        Post P1 = new Post(Me.getName(), jLabel8.getText(), jLabel1.getText(), 0);
-        P1.setShare(0);
-        P1.share();
-        jLabel91.setText(String.valueOf(P1.getShare()) + " Share");
+        Post P2 = Me.getPosts().get(1);
+        P2.setShare(0);
+        P2.share();
+        jLabel91.setText(String.valueOf(P2.getShare()) + " Share");
         jLabel91.setVisible(true);
     }//GEN-LAST:event_jLabel51MousePressed
 
     private void jLabel70MousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel70MousePressed
-        Post P1 = new Post(Me.getName(), jLabel22.getText(), jLabel11.getText(), 0);
+        //--------------------------------------SHARING MY FIRST POST
+        Post P1 = Me.getPosts().get(0);
         P1.setShare(0);
         P1.share();
         jLabel93.setText(String.valueOf(P1.getShare()) + " Share");
-        jLabel93.setVisible(true);        // TODO add your handling code here:
+        jLabel93.setVisible(true);
     }//GEN-LAST:event_jLabel70MousePressed
 
     private void jLabel56MousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel56MousePressed
-        Post P1 = new Post(User1.getName(), jLabel46.getText(), jLabel53.getText(), 0);
-        P1.setShare(0);
-        P1.share();
-        jLabel92.setText(String.valueOf(P1.getShare()) + " Share");
-        jLabel92.setVisible(true);  // TODO add your handling code here:
+//-------------------------------------SHARING USER1 POST
+        P6.setShare(0);
+        P6.share();
+        jLabel92.setText(String.valueOf(P6.getShare()) + " Share");
+        jLabel92.setVisible(true);
     }//GEN-LAST:event_jLabel56MousePressed
 
     private void jTextField5MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jTextField5MouseClicked
@@ -4256,7 +4263,7 @@ public class GUI extends javax.swing.JFrame {
     }//GEN-LAST:event_jTextField5ActionPerformed
 
     private void jButton5ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton5ActionPerformed
-
+        //-----------------------------ADDING MY COMMENT ON USER1 POST
         String comment = jTextField5.getText();
         Comment first = new Comment(Me.getName(), "Just now", comment, 0);
         jLabel99.setText("  " + first.getTextContent());
@@ -4266,32 +4273,34 @@ public class GUI extends javax.swing.JFrame {
         jTextField5.setText("Write comment...");
         jTextField5.setForeground(new Color(204, 204, 204));
         P6.addComment(first);
-        int comm= P6.getComments().size();
+        int comm = P6.getComments().size();
         jLabel71.setText(String.valueOf(comm) + " Comments");
         jButton5.setEnabled(false);
     }//GEN-LAST:event_jButton5ActionPerformed
 
     private void jLabel96MousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel96MousePressed
+        //---------------------------------LIKED MY COMMENT ON USER1 POST
         jLabel96.setForeground(new Color(93, 125, 204));
-        Comment first = new Comment(Me.getName(), "Just now", jTextField5.getText(), 0);
-        first.like();
-        jLabel101.setText(String.valueOf(first.getLikes()));
-        jLabel101.setVisible(true);  
+        Comment MyComment = P6.getComments().get(1);
+        MyComment.like();
+        jLabel101.setText(String.valueOf(MyComment.getLikes()));
+        jLabel101.setVisible(true);
     }//GEN-LAST:event_jLabel96MousePressed
 
     private void jLabel55MousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel55MousePressed
-        // TODO add your handling code here:
     }//GEN-LAST:event_jLabel55MousePressed
 
     private void jLabel104MousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel104MousePressed
+        //---------------------------------LIKED USER3 COMMENT
         jLabel104.setForeground(new Color(93, 125, 204));
-        Comment P1 = new Comment(User3.getName(), "30m", "Nice view", 0);
-        P1.like();
-        jLabel109.setText(String.valueOf(P1.getLikes()));
-        jLabel108.setVisible(true);         // TODO add your handling code here:
+        Comment User3Comment = P6.getComments().get(0);
+        User3Comment.like();
+        jLabel109.setText(String.valueOf(User3Comment.getLikes()));
+        jLabel109.setVisible(true);
     }//GEN-LAST:event_jLabel104MousePressed
 
     private void jLabel71MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel71MouseClicked
+        //------------------------------------SHOW USER3 COMMENT
         jPanel42.setVisible(true);
         jPanel80.setVisible(true);
         Comment P1 = new Comment(User3.getName(), "30m", "Nice view", 0);
@@ -4334,14 +4343,13 @@ public class GUI extends javax.swing.JFrame {
         USER.Me.addFriend(USER.User2);
         USER.Me.addFriend(USER.User3);
         //</editor-fold>
- GUI user = new GUI();
-     
-     // إضافة الأصدقاء مرة واحدة
-     user.Me.addFriend(user.User1);
-     user.Me.addFriend(user.User2);
-     user.Me.addFriend(user.User3);
+        GUI user = new GUI();
 
-       
+        // ADDING FRIENDS
+        user.Me.addFriend(user.User1);
+        user.Me.addFriend(user.User2);
+        user.Me.addFriend(user.User3);
+
         /* Create and display the form */
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {

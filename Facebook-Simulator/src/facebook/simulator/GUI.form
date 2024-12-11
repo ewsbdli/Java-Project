@@ -79,7 +79,7 @@
                       </Group>
                   </Group>
                   <EmptySpace min="0" pref="0" max="-2" attributes="0"/>
-                  <Component id="jPanel4" pref="806" max="32767" attributes="0"/>
+                  <Component id="jPanel4" pref="809" max="32767" attributes="0"/>
               </Group>
           </Group>
         </DimensionLayout>
@@ -195,7 +195,7 @@
                           <Component id="jPanel12" min="-2" pref="58" max="-2" attributes="0"/>
                           <EmptySpace max="-2" attributes="0"/>
                           <Component id="jPanel18" min="-2" pref="58" max="-2" attributes="0"/>
-                          <EmptySpace pref="150" max="32767" attributes="0"/>
+                          <EmptySpace pref="153" max="32767" attributes="0"/>
                       </Group>
                   </Group>
                 </DimensionLayout>
@@ -2490,7 +2490,7 @@
                               <Font name="Segoe UI" size="16" style="1"/>
                             </Property>
                             <Property name="text" type="java.lang.String" editor="org.netbeans.modules.form.RADConnectionPropertyEditor">
-                              <Connection code="P6.getTimeCreats()" type="code"/>
+                              <Connection code="P6.getTextContent()" type="code"/>
                             </Property>
                           </Properties>
                         </Component>
@@ -2697,7 +2697,7 @@
                               <Color blue="99" green="99" red="99" type="rgb"/>
                             </Property>
                             <Property name="text" type="java.lang.String" editor="org.netbeans.modules.form.RADConnectionPropertyEditor">
-                              <Connection code="&quot;1 Comments&quot;" type="code"/>
+                              <Connection code="&quot;1 Comment&quot;" type="code"/>
                             </Property>
                           </Properties>
                           <Events>
@@ -2735,7 +2735,7 @@
                                       <Group type="102" alignment="0" attributes="0">
                                           <Group type="103" groupAlignment="1" attributes="0">
                                               <Group type="102" alignment="1" attributes="0">
-                                                  <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
+                                                  <EmptySpace min="-2" pref="60" max="-2" attributes="0"/>
                                                   <Component id="jPanel73" min="-2" max="-2" attributes="0"/>
                                               </Group>
                                               <Component id="jPanel29" alignment="1" max="32767" attributes="0"/>
@@ -2746,14 +2746,14 @@
                                       <Group type="102" alignment="0" attributes="0">
                                           <EmptySpace min="-2" pref="20" max="-2" attributes="0"/>
                                           <Group type="103" groupAlignment="0" attributes="0">
-                                              <Group type="102" alignment="0" attributes="0">
+                                              <Group type="102" attributes="0">
                                                   <Component id="jLabel67" min="-2" pref="43" max="-2" attributes="0"/>
                                                   <EmptySpace min="-2" pref="482" max="-2" attributes="0"/>
                                                   <Component id="jLabel93" max="32767" attributes="0"/>
                                               </Group>
-                                              <Group type="102" alignment="0" attributes="0">
+                                              <Group type="102" attributes="0">
                                                   <Component id="jPanel71" min="-2" max="-2" attributes="0"/>
-                                                  <EmptySpace min="-2" pref="56" max="-2" attributes="0"/>
+                                                  <EmptySpace min="-2" pref="60" max="-2" attributes="0"/>
                                                   <Component id="jPanel72" min="-2" max="-2" attributes="0"/>
                                               </Group>
                                           </Group>
@@ -2923,20 +2923,12 @@
                           <Layout>
                             <DimensionLayout dim="0">
                               <Group type="103" groupAlignment="0" attributes="0">
-                                  <Group type="102" alignment="0" attributes="0">
-                                      <EmptySpace min="-2" pref="20" max="-2" attributes="0"/>
-                                      <Component id="jLabel68" min="-2" pref="100" max="-2" attributes="0"/>
-                                      <EmptySpace min="-2" pref="20" max="-2" attributes="0"/>
-                                  </Group>
+                                  <Component id="jLabel68" min="-2" pref="131" max="-2" attributes="0"/>
                               </Group>
                             </DimensionLayout>
                             <DimensionLayout dim="1">
                               <Group type="103" groupAlignment="0" attributes="0">
-                                  <Group type="102" alignment="0" attributes="0">
-                                      <EmptySpace max="-2" attributes="0"/>
-                                      <Component id="jLabel68" max="32767" attributes="0"/>
-                                      <EmptySpace max="-2" attributes="0"/>
-                                  </Group>
+                                  <Component id="jLabel68" alignment="0" max="32767" attributes="0"/>
                               </Group>
                             </DimensionLayout>
                           </Layout>
@@ -3029,7 +3021,7 @@
                             </DimensionLayout>
                             <DimensionLayout dim="1">
                               <Group type="103" groupAlignment="0" attributes="0">
-                                  <Component id="jLabel70" alignment="1" max="32767" attributes="0"/>
+                                  <Component id="jLabel70" alignment="1" pref="44" max="32767" attributes="0"/>
                               </Group>
                             </DimensionLayout>
                           </Layout>
