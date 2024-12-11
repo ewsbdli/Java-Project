@@ -12,18 +12,23 @@ class Post extends Content implements Shares, Likes {
     private int likes;
     private int share;
     PrivacySetting PostPrivacy;
-    private ArrayList<Comment> comments;
-
-    public Post(String author, String timeCreats, String textContent,int likes) {
+private ArrayList<Comment> comments = new ArrayList<>();
+    public Post(String author, String timeCreats, String textContent, int likes) {
         super(author, timeCreats);
         this.textContent = textContent;
-        this.likes =likes ;
+        this.likes = likes;
+    }
+
+    public void setComments(ArrayList<Comment> comments) {
+        this.comments = comments;
     }
 
     public ArrayList<Comment> getComments() {
         return comments;
     }
-
+public void addComment(Comment comment) {
+        comments.add(comment);
+    }
     public void setPostPrivacy(PrivacySetting PostPrivacy) {
         this.PostPrivacy = PostPrivacy;
     }
@@ -60,6 +65,6 @@ class Post extends Content implements Shares, Likes {
     @Override
     public void like() {
         likes++;
-        //System.out.println("Post liked! Total likes: " + likes);
+        
     }
 }

@@ -1,16 +1,10 @@
-/*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/GUIForms/JFrame.java to edit this template
- */
+
 package facebook.simulator;
 
 import javax.swing.JFrame;
 import javax.swing.JOptionPane;
 
-/**
- *
- * @author pc
- */
+
 public class LoginUI extends javax.swing.JFrame {
 
     /**
