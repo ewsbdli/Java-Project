@@ -7,10 +7,10 @@ class Comment extends Post implements Likes{
         super(author, timeCreats, textContent, likes);
     }
 
-    void setComments(Comment P1) {
-        throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
+    @Override
+    public void like() {
+        super.like(); 
     }
-   
-
+    
 
 }
