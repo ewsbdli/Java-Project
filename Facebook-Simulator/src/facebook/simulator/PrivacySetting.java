@@ -5,5 +5,5 @@
 package facebook.simulator;
 
 enum PrivacySetting {
-    Public, Friends_Only
+    PUBLIC, FRIENDS_ONLY
 }

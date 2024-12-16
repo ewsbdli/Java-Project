@@ -58,7 +58,7 @@ class Reel extends Content implements Shares, Likes {
     @Override
     public void share() {
         share++;
-        System.out.println("Shares by: " + getAuthor()+"Total Shares: "+share);
+        System.out.println("Shares by: " + getAuthor()+" Total Shares: "+share);
     }
 
     @Override
