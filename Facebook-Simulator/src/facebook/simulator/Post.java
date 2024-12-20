@@ -40,6 +40,10 @@ class Post extends Content implements Shares, Likes {
         this.share = share;
     }
 
+    public void setLikes(int likes) {
+        this.likes = likes;
+    }
+
     public int getShare() {
         return share;
     }
@@ -55,7 +59,10 @@ class Post extends Content implements Shares, Likes {
     public String getTextContent() {
         return textContent;
     }
+public void removelike() {
+        likes--;
 
+    }
     @Override
     public void share() {
         share++;
