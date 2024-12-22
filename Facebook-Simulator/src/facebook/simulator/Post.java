@@ -59,10 +59,6 @@ class Post extends Content implements Shares, Likes {
     public String getTextContent() {
         return textContent;
     }
-public void removelike() {
-        likes--;
-
-    }
     @Override
     public void share() {
         share++;
