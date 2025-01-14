@@ -3,7 +3,7 @@ package facebook.simulator;
 class Story extends Content implements Shares, Likes {
 
     private String imageUrl;
-    private String age = "24hour";
+    private String storyLifeSpan = "24hour";
     private int like = 0;
     private int share = 0;
 
@@ -23,7 +23,7 @@ class Story extends Content implements Shares, Likes {
     }
 
     public String getAge() {
-        return age;
+        return storyLifeSpan;
     }
 
     public int getLike() {

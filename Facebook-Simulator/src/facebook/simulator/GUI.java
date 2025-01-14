@@ -7,11 +7,8 @@ package facebook.simulator;
 import java.awt.Color;
 import java.net.MalformedURLException;
 import java.net.URL;
-import java.util.logging.Level;
-import java.util.logging.Logger;
 import javax.swing.Icon;
 import javax.swing.ImageIcon;
-import javax.swing.JFrame;
 import javax.swing.JOptionPane;
 
 /**
@@ -19,6 +16,7 @@ import javax.swing.JOptionPane;
  * @author pc
  */
 public class GUI extends javax.swing.JFrame {
+//---------------DEFINE USERS FROM CLASS USER "ME IS THE MAIN USER".
 
     User Me = new User("Maha Mohamed");
     User User1 = new User("Marnie");
@@ -27,16 +25,20 @@ public class GUI extends javax.swing.JFrame {
     User User4 = new User("Shim Soe");
     User User5 = new User("Malak");
     User User6 = new User("Yuki Itose");
+    //---------------ADDING TWO DEFAULT POSTS BY USER1 & USER3.
     Post P6 = new Post(User1.getName(), "50m", "In love with Sakura blossoms.", 0);
     Post P3 = new Post(User3.getName(), "2h", "Look at this cute cat >.<", 0);
     private int clickCount = 0;
+    //---------------DEFINE DEFAULT COMMENT FROM COMMENT CLASS.
     Comment User3Comment = new Comment(User3.getName(), "30m", " enchanting shot!", 0);
     Icon deleteUser = new ImageIcon(getClass().getResource("/facebook/simulator/images/remove-user.png"));
 
     public GUI() {
         initComponents();
+        //-------SET ICON TO FRAME WINDOW.
         this.setIconImage(new ImageIcon(getClass().getResource("/facebook/simulator/images/facebook_icon.png")).getImage());
-        this.setExtendedState(JFrame.MAXIMIZED_BOTH);
+        //--------DISPLAY WINDOW IN THE CENTER.
+        this.setLocationRelativeTo(null);
 
     }
 
@@ -181,6 +183,7 @@ public class GUI extends javax.swing.JFrame {
         jLabel126 = new javax.swing.JLabel();
         jPanel39 = new javax.swing.JPanel();
         jLabel91 = new javax.swing.JLabel();
+        jLabel164 = new javax.swing.JLabel();
         jPanel54 = new javax.swing.JPanel();
         jPanel53 = new javax.swing.JPanel();
         jLabel45 = new javax.swing.JLabel();
@@ -346,6 +349,7 @@ public class GUI extends javax.swing.JFrame {
         jPanel124 = new javax.swing.JPanel();
         jLabel162 = new javax.swing.JLabel();
         jLabel161 = new javax.swing.JLabel();
+        jLabel163 = new javax.swing.JLabel();
         jPanel49 = new javax.swing.JPanel();
         jLabel57 = new javax.swing.JLabel();
         jTextField7 = new javax.swing.JTextField();
@@ -369,7 +373,6 @@ public class GUI extends javax.swing.JFrame {
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setTitle("Facebook");
         setBackground(new java.awt.Color(242, 244, 247));
-        setResizable(false);
         addMouseMotionListener(new java.awt.event.MouseMotionAdapter() {
             public void mouseDragged(java.awt.event.MouseEvent evt) {
                 formMouseDragged(evt);
@@ -959,7 +962,6 @@ public class GUI extends javax.swing.JFrame {
         jLabel66.setBackground(new java.awt.Color(0, 0, 0));
         jLabel66.setFont(new java.awt.Font("Segoe UI Semibold", 0, 18)); // NOI18N
         jLabel66.setText("User");
-        jLabel66.setToolTipText("");
         jLabel66.setPreferredSize(new java.awt.Dimension(111, 25));
         jLabel66.addMouseMotionListener(new java.awt.event.MouseMotionAdapter() {
             public void mouseMoved(java.awt.event.MouseEvent evt) {
@@ -1418,7 +1420,6 @@ public class GUI extends javax.swing.JFrame {
         jLabel156.setBackground(new java.awt.Color(0, 0, 0));
         jLabel156.setFont(new java.awt.Font("Segoe UI Semibold", 0, 18)); // NOI18N
         jLabel156.setText("User");
-        jLabel156.setToolTipText("");
         jLabel156.addMouseMotionListener(new java.awt.event.MouseMotionAdapter() {
             public void mouseMoved(java.awt.event.MouseEvent evt) {
                 jLabel156MouseMoved(evt);
@@ -1477,7 +1478,6 @@ public class GUI extends javax.swing.JFrame {
         jLabel159.setBackground(new java.awt.Color(0, 0, 0));
         jLabel159.setFont(new java.awt.Font("Segoe UI Semibold", 0, 18)); // NOI18N
         jLabel159.setText("User");
-        jLabel159.setToolTipText("");
         jLabel159.addMouseMotionListener(new java.awt.event.MouseMotionAdapter() {
             public void mouseMoved(java.awt.event.MouseEvent evt) {
                 jLabel159MouseMoved(evt);
@@ -2388,11 +2388,20 @@ public class GUI extends javax.swing.JFrame {
                 .addContainerGap())
         );
 
+        jLabel164.setFont(new java.awt.Font("Segoe UI Black", 1, 18)); // NOI18N
+        jLabel164.setForeground(new java.awt.Color(153, 153, 153));
+        jLabel164.setText(". . .");
+        jLabel164.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jLabel164MouseClicked(evt);
+            }
+        });
+
         javax.swing.GroupLayout jPanel55Layout = new javax.swing.GroupLayout(jPanel55);
         jPanel55.setLayout(jPanel55Layout);
         jPanel55Layout.setHorizontalGroup(
             jPanel55Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel55Layout.createSequentialGroup()
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel55Layout.createSequentialGroup()
                 .addGap(30, 30, 30)
                 .addGroup(jPanel55Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(jPanel55Layout.createSequentialGroup()
@@ -2421,12 +2430,14 @@ public class GUI extends javax.swing.JFrame {
                                 .addComponent(jPanel58, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
                         .addGap(13, 13, 13)))
                 .addGap(17, 17, 17))
-            .addGroup(jPanel55Layout.createSequentialGroup()
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel55Layout.createSequentialGroup()
                 .addGap(15, 15, 15)
                 .addComponent(jLabel6)
                 .addGap(6, 6, 6)
                 .addComponent(jPanel52, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addComponent(jLabel164)
+                .addGap(26, 26, 26))
         );
         jPanel55Layout.setVerticalGroup(
             jPanel55Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -2435,7 +2446,11 @@ public class GUI extends javax.swing.JFrame {
                     .addComponent(jLabel6, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel55Layout.createSequentialGroup()
                         .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                        .addComponent(jPanel52, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                        .addGroup(jPanel55Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(jPanel52, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addGroup(jPanel55Layout.createSequentialGroup()
+                                .addGap(9, 9, 9)
+                                .addComponent(jLabel164, javax.swing.GroupLayout.PREFERRED_SIZE, 17, javax.swing.GroupLayout.PREFERRED_SIZE)))))
                 .addGap(10, 10, 10)
                 .addComponent(jPanel28, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(16, 16, 16)
@@ -4325,10 +4340,7 @@ public class GUI extends javax.swing.JFrame {
         jPanel110.setLayout(jPanel110Layout);
         jPanel110Layout.setHorizontalGroup(
             jPanel110Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel110Layout.createSequentialGroup()
-                .addGap(35, 35, 35)
-                .addComponent(jLabel140, javax.swing.GroupLayout.PREFERRED_SIZE, 115, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+            .addComponent(jLabel140, javax.swing.GroupLayout.DEFAULT_SIZE, 156, Short.MAX_VALUE)
         );
         jPanel110Layout.setVerticalGroup(
             jPanel110Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -4566,6 +4578,9 @@ public class GUI extends javax.swing.JFrame {
             public void mouseExited(java.awt.event.MouseEvent evt) {
                 jLabel149MouseExited(evt);
             }
+            public void mousePressed(java.awt.event.MouseEvent evt) {
+                jLabel149MousePressed(evt);
+            }
         });
 
         javax.swing.GroupLayout jPanel118Layout = new javax.swing.GroupLayout(jPanel118);
@@ -4592,6 +4607,9 @@ public class GUI extends javax.swing.JFrame {
             public void mouseExited(java.awt.event.MouseEvent evt) {
                 jLabel150MouseExited(evt);
             }
+            public void mousePressed(java.awt.event.MouseEvent evt) {
+                jLabel150MousePressed(evt);
+            }
         });
 
         javax.swing.GroupLayout jPanel119Layout = new javax.swing.GroupLayout(jPanel119);
@@ -4617,6 +4635,9 @@ public class GUI extends javax.swing.JFrame {
         jLabel151.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseExited(java.awt.event.MouseEvent evt) {
                 jLabel151MouseExited(evt);
+            }
+            public void mousePressed(java.awt.event.MouseEvent evt) {
+                jLabel151MousePressed(evt);
             }
         });
 
@@ -4737,9 +4758,17 @@ public class GUI extends javax.swing.JFrame {
 
         jLabel90.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel90.setIcon(new javax.swing.ImageIcon(getClass().getResource("/facebook/simulator/images/plus.png"))); // NOI18N
+        jLabel90.addMouseMotionListener(new java.awt.event.MouseMotionAdapter() {
+            public void mouseMoved(java.awt.event.MouseEvent evt) {
+                jLabel90MouseMoved(evt);
+            }
+        });
         jLabel90.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
                 jLabel90MouseClicked(evt);
+            }
+            public void mouseExited(java.awt.event.MouseEvent evt) {
+                jLabel90MouseExited(evt);
             }
         });
 
@@ -4760,7 +4789,8 @@ public class GUI extends javax.swing.JFrame {
         jPanel84Layout.setVerticalGroup(
             jPanel84Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel84Layout.createSequentialGroup()
-                .addComponent(jLabel90, javax.swing.GroupLayout.PREFERRED_SIZE, 43, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap()
+                .addComponent(jLabel90, javax.swing.GroupLayout.PREFERRED_SIZE, 51, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(0, 0, Short.MAX_VALUE)
                 .addComponent(jLabel113))
         );
@@ -4774,7 +4804,7 @@ public class GUI extends javax.swing.JFrame {
                 .addGroup(jPanel75Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                     .addComponent(jPanel84, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                     .addComponent(jLabel89, javax.swing.GroupLayout.PREFERRED_SIZE, 0, Short.MAX_VALUE))
-                .addContainerGap(9, Short.MAX_VALUE))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         jPanel75Layout.setVerticalGroup(
             jPanel75Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -4783,9 +4813,10 @@ public class GUI extends javax.swing.JFrame {
                 .addComponent(jLabel89, javax.swing.GroupLayout.PREFERRED_SIZE, 211, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(jPanel84, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(8, Short.MAX_VALUE))
+                .addGap(6, 6, 6))
         );
 
+        jPanel123.setVisible(false);
         jPanel123.setBackground(new java.awt.Color(242, 244, 247));
 
         jLabel114.setVisible(false);
@@ -4797,26 +4828,35 @@ public class GUI extends javax.swing.JFrame {
 
         jPanel124.setBackground(new java.awt.Color(242, 244, 247));
 
+        jLabel162.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
+
+        jLabel161.setForeground(new java.awt.Color(204, 204, 204));
         jLabel161.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
+        jLabel161.setVerticalAlignment(javax.swing.SwingConstants.TOP);
 
         javax.swing.GroupLayout jPanel124Layout = new javax.swing.GroupLayout(jPanel124);
         jPanel124.setLayout(jPanel124Layout);
         jPanel124Layout.setHorizontalGroup(
             jPanel124Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel124Layout.createSequentialGroup()
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addComponent(jLabel162, javax.swing.GroupLayout.PREFERRED_SIZE, 132, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(0, 0, 0)
-                .addComponent(jLabel161, javax.swing.GroupLayout.PREFERRED_SIZE, 83, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap())
+                .addContainerGap()
+                .addComponent(jLabel163, javax.swing.GroupLayout.PREFERRED_SIZE, 49, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addGroup(jPanel124Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(jLabel161, javax.swing.GroupLayout.PREFERRED_SIZE, 83, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jLabel162, javax.swing.GroupLayout.PREFERRED_SIZE, 134, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(44, 44, 44))
         );
         jPanel124Layout.setVerticalGroup(
             jPanel124Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel124Layout.createSequentialGroup()
-                .addGroup(jPanel124Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jLabel162, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(jLabel161, javax.swing.GroupLayout.DEFAULT_SIZE, 36, Short.MAX_VALUE))
-                .addContainerGap())
+            .addGroup(jPanel124Layout.createSequentialGroup()
+                .addGroup(jPanel124Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
+                    .addComponent(jLabel163, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addGroup(jPanel124Layout.createSequentialGroup()
+                        .addComponent(jLabel162, javax.swing.GroupLayout.PREFERRED_SIZE, 24, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(0, 0, 0)
+                        .addComponent(jLabel161, javax.swing.GroupLayout.PREFERRED_SIZE, 24, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                .addGap(6, 6, 6))
         );
 
         javax.swing.GroupLayout jPanel123Layout = new javax.swing.GroupLayout(jPanel123);
@@ -4824,21 +4864,22 @@ public class GUI extends javax.swing.JFrame {
         jPanel123Layout.setHorizontalGroup(
             jPanel123Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel123Layout.createSequentialGroup()
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addGroup(jPanel123Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jPanel124, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel123Layout.createSequentialGroup()
-                        .addComponent(jLabel114, javax.swing.GroupLayout.PREFERRED_SIZE, 181, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(24, 24, 24))))
+                .addGap(36, 36, 36)
+                .addComponent(jLabel114, javax.swing.GroupLayout.PREFERRED_SIZE, 181, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel123Layout.createSequentialGroup()
+                .addContainerGap(14, Short.MAX_VALUE)
+                .addComponent(jPanel124, javax.swing.GroupLayout.PREFERRED_SIZE, 192, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(47, 47, 47))
         );
         jPanel123Layout.setVerticalGroup(
             jPanel123Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel123Layout.createSequentialGroup()
                 .addContainerGap()
                 .addComponent(jPanel124, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addGap(0, 0, 0)
                 .addComponent(jLabel114, javax.swing.GroupLayout.PREFERRED_SIZE, 223, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addContainerGap(20, Short.MAX_VALUE))
         );
 
         javax.swing.GroupLayout jPanel10Layout = new javax.swing.GroupLayout(jPanel10);
@@ -4848,45 +4889,45 @@ public class GUI extends javax.swing.JFrame {
             .addGroup(jPanel10Layout.createSequentialGroup()
                 .addGap(20, 20, 20)
                 .addGroup(jPanel10Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(jPanel10Layout.createSequentialGroup()
+                        .addComponent(jPanel75, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(jPanel123, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                     .addGroup(jPanel10Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
-                        .addComponent(jPanel55, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.PREFERRED_SIZE, 0, Short.MAX_VALUE)
+                        .addComponent(jPanel55, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                         .addComponent(jPanel21, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                         .addComponent(jPanel69, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.PREFERRED_SIZE, 0, Short.MAX_VALUE)
                         .addComponent(jPanel31, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                         .addComponent(jPanel54, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                         .addComponent(jPanel42, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                         .addComponent(jPanel107, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                        .addComponent(jPanel3, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                    .addGroup(jPanel10Layout.createSequentialGroup()
-                        .addComponent(jPanel75, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                        .addComponent(jPanel123, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                .addContainerGap(37, Short.MAX_VALUE))
+                        .addComponent(jPanel3, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
+                .addContainerGap(31, Short.MAX_VALUE))
         );
         jPanel10Layout.setVerticalGroup(
             jPanel10Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel10Layout.createSequentialGroup()
                 .addContainerGap()
                 .addComponent(jPanel3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(12, 12, 12)
-                .addGroup(jPanel10Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                    .addComponent(jPanel75, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(jPanel123, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                .addGap(2, 2, 2)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addGroup(jPanel10Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(jPanel75, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jPanel123, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(4, 4, 4)
                 .addComponent(jPanel55, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(0, 0, 0)
                 .addComponent(jPanel21, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(12, 12, 12)
+                .addGap(4, 4, 4)
                 .addComponent(jPanel69, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(0, 0, 0)
                 .addComponent(jPanel31, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(12, 12, 12)
+                .addGap(4, 4, 4)
                 .addComponent(jPanel54, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(0, 0, 0)
                 .addComponent(jPanel42, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(12, 12, 12)
+                .addGap(4, 4, 4)
                 .addComponent(jPanel107, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(62, 62, 62))
+                .addGap(108, 108, 108))
         );
 
         jScrollPane1.setViewportView(jPanel10);
@@ -4910,7 +4951,9 @@ public class GUI extends javax.swing.JFrame {
             jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addComponent(jSeparator2)
             .addComponent(jPanel6, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-            .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 0, Short.MAX_VALUE)
+            .addGroup(jPanel4Layout.createSequentialGroup()
+                .addGap(1, 1, 1)
+                .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 0, Short.MAX_VALUE))
             .addComponent(jSeparator3, javax.swing.GroupLayout.Alignment.TRAILING)
             .addComponent(jPanel43, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
         );
@@ -5321,12 +5364,12 @@ public class GUI extends javax.swing.JFrame {
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
         Post P1 = new Post(Me.getName(), "Just now", jTextField2.getText(), 0);
-        String def = jTextField2.getText();
+        String PostContent = jTextField2.getText();
         //---------------------------------------------CHECK IF THE POST IS NOT EMPTY!
-        if (def.equals("What's on your mind?") || def.isEmpty()) {
+        if (PostContent.equals("What's on your mind?") || PostContent.isEmpty()) {
             JOptionPane.showMessageDialog(this, "Please write something to post it!");
         } else {
-            if (!def.equals("What's on your mind?")) {
+            if (!PostContent.equals("What's on your mind?")) {
                 //----------------------------------FIRST POST FOR USER (ME)
                 clickCount++;
                 if (clickCount == 1) {
@@ -5350,7 +5393,7 @@ public class GUI extends javax.swing.JFrame {
                         jPanel72.setVisible(false);
                     }
                     jPanel69.setVisible(true);//SHOW POST PANEL
-                    Me.addPost(P1); //ADDING POST TO ARRAY LIST(LOOK AT POST CLASS)
+                    Me.addPost(P1); //ADDING POST TO ARRAY LIST(IN THE POST CLASS)
                     P1.setShare(0);
                     jTextField2.setForeground(new Color(153, 153, 153));
                     jTextField2.setText("What's on your mind?");
@@ -5515,7 +5558,6 @@ public class GUI extends javax.swing.JFrame {
     }//GEN-LAST:event_jTextField2MouseClicked
 
     private void jTextField2MouseMoved(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jTextField2MouseMoved
-        //jTextField2.setText(""); 
     }//GEN-LAST:event_jTextField2MouseMoved
 
     private void jTextField2MousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jTextField2MousePressed
@@ -5571,27 +5613,13 @@ public class GUI extends javax.swing.JFrame {
     }//GEN-LAST:event_jPanel60MousePressed
 
     private void jLabel54MousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel54MousePressed
-        //-----------------LIKED USER1 POST
+        //--------------------------SHOWING LIKES PANEL (FOR SECOND POST BY USER "USER1")
         jPanel36.setVisible(true);
-
-//        P6.like();
-//        jLabel52.setText(String.valueOf(P6.getLikes()));
-//        jLabel52.setVisible(true);
-//        jLabel54.setForeground(new Color(93, 125, 204));
-//        ImageIcon icon = new ImageIcon(getClass().getResource("/facebook/simulator/images/Blue-Like.png"));
-//        jLabel54.setIcon(icon);
     }//GEN-LAST:event_jLabel54MousePressed
 
     private void jLabel49MousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel49MousePressed
-        //--------------------------LIKED MY SECOND POST
+        //--------------------------SHOWING LIKES PANEL (FOR SECOND POST BY USER "ME")
         jPanel38.setVisible(true);
-//        Post P1 = Me.getPosts().get(1);
-//        P1.like();
-//        jLabel44.setText(String.valueOf(P1.getLikes()));
-//        jLabel44.setVisible(true);
-//        jLabel49.setForeground(new Color(93, 125, 204));
-//        ImageIcon icon = new ImageIcon(getClass().getResource("/facebook/simulator/images/Blue-Like.png"));
-//        jLabel49.setIcon(icon);
     }//GEN-LAST:event_jLabel49MousePressed
 
     private void jPanel57MouseMoved(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jPanel57MouseMoved
@@ -5742,16 +5770,14 @@ public class GUI extends javax.swing.JFrame {
     }//GEN-LAST:event_jLabel62MouseExited
 
     private void jPanel64MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jPanel64MouseClicked
-//        FriendsList Fr = new FriendsList();
-//        Fr.setVisible(true);
-//        this.setVisible(false);
+
     }//GEN-LAST:event_jPanel64MouseClicked
 
 
     private void jButton6ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton6ActionPerformed
         //--------------------------CHECKING IF FRIENDS ARRAY LIST LESS THAN LIMIT(5 FRIENDS)
         if (Me.getFriends().size() < Me.getLimit()) {
-            User4.addFriend(Me);     //---------------ACCEPT FRIEND REQUESTS 
+            User4.addFriend(Me); //---ACCEPT FRIEND REQUESTS (ADDING "USER4" TO friends ARRAY LIST FOR USER "ME").
             jButton6.setVisible(false);
             jButton8.setVisible(false);
             jLabel10.setText("Request accepeted");
@@ -5763,6 +5789,7 @@ public class GUI extends javax.swing.JFrame {
             jLabel37.setText("Friends  " + String.valueOf(Me.getFriends().size()));
         } else {
             ImageIcon icon = new ImageIcon(getClass().getResource("/facebook/simulator/images/apology (2).png"));
+            //------ ERROR MESSAGE WHEN THE MAXIMUM FRIEND LIMIT IS REACHED
             JOptionPane.showMessageDialog(this, "You cannot add more friends", "Friend Limit Reached", JOptionPane.ERROR_MESSAGE, icon);
         }
 
@@ -5792,14 +5819,6 @@ public class GUI extends javax.swing.JFrame {
     }//GEN-LAST:event_jLabel68MouseExited
 
     private void jLabel68MousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel68MousePressed
-        //-----------------------------LIKED MY FIRST POST 
-//        Post P2 = Me.getPosts().get(0);
-//        P2.like();
-//        jLabel67.setText(String.valueOf(P2.getLikes()));
-//        jLabel67.setVisible(true);
-//        jLabel68.setForeground(new Color(93, 125, 204));
-//        ImageIcon icon = new ImageIcon(getClass().getResource("/facebook/simulator/images/Blue-Like.png"));
-//        jLabel68.setIcon(icon);
         jPanel98.setVisible(true);
 
     }//GEN-LAST:event_jLabel68MousePressed
@@ -5984,9 +6003,9 @@ public class GUI extends javax.swing.JFrame {
             jLabel155.setIcon(icon);
             jLabel156.setText(User5.getName());
             jLabel37.setText("Friends  " + String.valueOf(Me.getFriends().size()));
-        } //IF THE LIMIT FOR ADDING FRIENDS IS EXCEEDED
-        else {
+        } else {
             ImageIcon icon = new ImageIcon(getClass().getResource("/facebook/simulator/images/apology (2).png"));
+            //------ ERROR MESSAGE WHEN THE MAXIMUM FRIEND LIMIT IS REACHED
             JOptionPane.showMessageDialog(this, "You cannot add more friends", "Friend Limit Reached", JOptionPane.ERROR_MESSAGE, icon);
         }
     }//GEN-LAST:event_jButton9ActionPerformed
@@ -6093,9 +6112,9 @@ public class GUI extends javax.swing.JFrame {
             jLabel158.setIcon(icon);
             jLabel159.setText(User6.getName());
             jLabel37.setText("Friends  " + String.valueOf(Me.getFriends().size()));
-        } //IF THE LIMIT FOR ADDING FRIENDS IS EXCEEDED
-        else {
+        } else {
             ImageIcon icon = new ImageIcon(getClass().getResource("/facebook/simulator/images/apology (2).png"));
+            //------ ERROR MESSAGE WHEN THE MAXIMUM FRIEND LIMIT IS REACHED
             JOptionPane.showMessageDialog(this, "You cannot add more friends", "Friend Limit Reached", JOptionPane.ERROR_MESSAGE, icon);
         }
     }//GEN-LAST:event_jButton11ActionPerformed
@@ -6105,7 +6124,7 @@ public class GUI extends javax.swing.JFrame {
         jButton11.setVisible(false);
         jButton12.setVisible(false);
         jLabel112.setText("Request deleted");
-        jPanel35.setVisible(true);        // TODO add your handling code here:
+        jPanel35.setVisible(true);
     }//GEN-LAST:event_jButton12ActionPerformed
 
     private void jPanel83MouseMoved(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jPanel83MouseMoved
@@ -6117,6 +6136,8 @@ public class GUI extends javax.swing.JFrame {
     }//GEN-LAST:event_jPanel83MouseExited
 
     private void jLabel72MousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel72MousePressed
+        //-------ADDING "LIKE" REACTION ON "USER1" POST. 
+        P6.setLikes(0);
         P6.like();
         jLabel52.setText(String.valueOf(P6.getLikes()));
         jLabel52.setVisible(true);
@@ -6130,7 +6151,7 @@ public class GUI extends javax.swing.JFrame {
     }//GEN-LAST:event_jLabel72MousePressed
 
     private void jLabel73MousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel73MousePressed
-
+        //-------ADDING "LIKE" REACTION ON "ME" SECOND POST. 
         Post P1 = Me.getPosts().get(1);
         P1.setLikes(0);
         P1.like();
@@ -6148,6 +6169,7 @@ public class GUI extends javax.swing.JFrame {
     }//GEN-LAST:event_jLabel73MousePressed
 
     private void jLabel127MousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel127MousePressed
+        //-------ADDING "LIKE" REACTION ON "ME" FIRST POST. 
         Post P1 = Me.getPosts().get(0);
         P1.setLikes(0);
         P1.like();
@@ -6163,6 +6185,7 @@ public class GUI extends javax.swing.JFrame {
     }//GEN-LAST:event_jLabel127MousePressed
 
     private void jLabel121MousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel121MousePressed
+        //-------ADDING "LOVE" REACTION ON "ME" SECOND POST. 
         Post P1 = Me.getPosts().get(1);
         P1.setLikes(0);
         P1.like();
@@ -6178,6 +6201,7 @@ public class GUI extends javax.swing.JFrame {
     }//GEN-LAST:event_jLabel121MousePressed
 
     private void jLabel122MousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel122MousePressed
+        //-------ADDING "CARE" REACTION ON "ME" SECOND POST. 
         Post P1 = Me.getPosts().get(1);
         P1.setLikes(0);
         P1.like();
@@ -6193,6 +6217,7 @@ public class GUI extends javax.swing.JFrame {
     }//GEN-LAST:event_jLabel122MousePressed
 
     private void jLabel123MousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel123MousePressed
+        //-------ADDING "HAHA" REACTION ON "ME" SECOND POST
         Post P1 = Me.getPosts().get(1);
         P1.setLikes(0);
         P1.like();
@@ -6208,7 +6233,8 @@ public class GUI extends javax.swing.JFrame {
     }//GEN-LAST:event_jLabel123MousePressed
 
     private void jLabel124MousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel124MousePressed
-        Post P1 = Me.getPosts().get(1);
+        //-------ADDING "WOW" REACTION ON "ME" SECOND POST
+        Post P1 = Me.getPosts().getLast();
         P1.setLikes(0);
         P1.like();
         jLabel44.setText(String.valueOf(P1.getLikes()));
@@ -6223,6 +6249,7 @@ public class GUI extends javax.swing.JFrame {
     }//GEN-LAST:event_jLabel124MousePressed
 
     private void jLabel125MousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel125MousePressed
+        //-------ADDING "SAD" REACTION ON "ME" SECOND POST
         Post P1 = Me.getPosts().get(1);
         P1.setLikes(0);
         P1.like();
@@ -6257,6 +6284,7 @@ public class GUI extends javax.swing.JFrame {
     }//GEN-LAST:event_jPanel38PropertyChange
 
     private void jLabel126MousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel126MousePressed
+        //-------ADDING "ANGRY" REACTION ON "ME" SECOND POST
         Post P1 = Me.getPosts().get(1);
         P1.setLikes(0);
         P1.like();
@@ -6272,6 +6300,7 @@ public class GUI extends javax.swing.JFrame {
     }//GEN-LAST:event_jLabel126MousePressed
 
     private void jLabel128MousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel128MousePressed
+        //-------ADDING "LOVE" REACTION ON "ME" FIRST POST
         Post P1 = Me.getPosts().get(0);
         P1.setLikes(0);
         P1.like();
@@ -6287,6 +6316,7 @@ public class GUI extends javax.swing.JFrame {
     }//GEN-LAST:event_jLabel128MousePressed
 
     private void jLabel129MousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel129MousePressed
+        //-------ADDING "CARE" REACTION ON "ME" FIRST POST
         Post P1 = Me.getPosts().get(0);
         P1.setLikes(0);
         P1.like();
@@ -6302,6 +6332,7 @@ public class GUI extends javax.swing.JFrame {
     }//GEN-LAST:event_jLabel129MousePressed
 
     private void jLabel130MousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel130MousePressed
+        //-------ADDING "CARE" REACTION ON "ME" FIRST POST
         Post P1 = Me.getPosts().get(0);
         P1.setLikes(0);
         P1.like();
@@ -6317,6 +6348,7 @@ public class GUI extends javax.swing.JFrame {
      }//GEN-LAST:event_jLabel130MousePressed
 
     private void jLabel131MousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel131MousePressed
+        //-------ADDING "WOW" REACTION ON "ME" FIRST POST
         Post P1 = Me.getPosts().get(0);
         P1.setLikes(0);
         P1.like();
@@ -6332,6 +6364,7 @@ public class GUI extends javax.swing.JFrame {
     }//GEN-LAST:event_jLabel131MousePressed
 
     private void jLabel132MousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel132MousePressed
+        //-------ADDING "SAD" REACTION ON "ME" FIRST POST
         Post P1 = Me.getPosts().get(0);
         P1.setLikes(0);
         P1.like();
@@ -6347,6 +6380,7 @@ public class GUI extends javax.swing.JFrame {
     }//GEN-LAST:event_jLabel132MousePressed
 
     private void jLabel133MousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel133MousePressed
+        //-------ADDING "ANGRY" REACTION ON "ME" FIRST POST
         Post P1 = Me.getPosts().get(0);
         P1.setLikes(0);
         P1.like();
@@ -6362,6 +6396,8 @@ public class GUI extends javax.swing.JFrame {
     }//GEN-LAST:event_jLabel133MousePressed
 
     private void jLabel115MousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel115MousePressed
+        //-------ADDING "LOVE" REACTION ON "USER1" POST.
+        P6.setLikes(0);
         P6.like();
         jLabel52.setText(String.valueOf(P6.getLikes()));
         jLabel52.setVisible(true);
@@ -6375,6 +6411,8 @@ public class GUI extends javax.swing.JFrame {
     }//GEN-LAST:event_jLabel115MousePressed
 
     private void jLabel116MousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel116MousePressed
+        //-------ADDING "CARE" REACTION ON "USER1" POST.
+        P6.setLikes(0);
         P6.like();
         jLabel52.setText(String.valueOf(P6.getLikes()));
         jLabel52.setVisible(true);
@@ -6388,6 +6426,8 @@ public class GUI extends javax.swing.JFrame {
     }//GEN-LAST:event_jLabel116MousePressed
 
     private void jLabel117MousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel117MousePressed
+        //-------ADDING "HAHA" REACTION ON "USER1" POST.
+        P6.setLikes(0);
         P6.like();
         jLabel52.setText(String.valueOf(P6.getLikes()));
         jLabel52.setVisible(true);
@@ -6657,6 +6697,7 @@ public class GUI extends javax.swing.JFrame {
         jPanel38.setVisible(false);
         jPanel98.setVisible(false);
         jPanel36.setVisible(false);
+        jPanel113.setVisible(false);
     }//GEN-LAST:event_jScrollPane1MouseWheelMoved
 
     private void jScrollPane1MouseMoved(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jScrollPane1MouseMoved
@@ -6664,14 +6705,16 @@ public class GUI extends javax.swing.JFrame {
     }//GEN-LAST:event_jScrollPane1MouseMoved
 
     private void jLabel140MouseMoved(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel140MouseMoved
-        // TODO add your handling code here:
+        jPanel110.setBackground(new Color(249, 249, 249));
+
     }//GEN-LAST:event_jLabel140MouseMoved
 
     private void jLabel140MouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel140MouseExited
-        // TODO add your handling code here:
+        jPanel110.setBackground(new Color(255, 255, 255));
     }//GEN-LAST:event_jLabel140MouseExited
 
     private void jLabel140MousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel140MousePressed
+        //-----SHARING "USER3" POST
         P3.share();
         jLabel143.setText(String.valueOf(P3.getShare()) + " Share");
         jLabel143.setVisible(true);        // TODO add your handling code here:
@@ -6694,11 +6737,11 @@ public class GUI extends javax.swing.JFrame {
     }//GEN-LAST:event_jPanel111MouseExited
 
     private void jLabel142MouseMoved(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel142MouseMoved
-        // TODO add your handling code here:
+        jPanel112.setBackground(new Color(249, 249, 249));
     }//GEN-LAST:event_jLabel142MouseMoved
 
     private void jLabel142MouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel142MouseExited
-        // TODO add your handling code here:
+        jPanel112.setBackground(new Color(255, 255, 255));
     }//GEN-LAST:event_jLabel142MouseExited
 
     private void jLabel142MousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel142MousePressed
@@ -6733,6 +6776,8 @@ public class GUI extends javax.swing.JFrame {
     }//GEN-LAST:event_jLabel145MouseExited
 
     private void jLabel145MousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel145MousePressed
+        //-------ADDING "LIKE" REACTION ON "USER3" POST.
+        P3.setLikes(0);
         P3.like();
         jLabel138.setText(String.valueOf(P3.getLikes()));
         jLabel138.setVisible(true);
@@ -6756,6 +6801,8 @@ public class GUI extends javax.swing.JFrame {
     }//GEN-LAST:event_jLabel146MouseExited
 
     private void jLabel146MousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel146MousePressed
+        //-------ADDING "LOVE" REACTION ON "USER3" POST.
+        P3.setLikes(0);
         P3.like();
         jLabel138.setText(String.valueOf(P3.getLikes()));
         jLabel138.setVisible(true);
@@ -6779,7 +6826,18 @@ public class GUI extends javax.swing.JFrame {
     }//GEN-LAST:event_jLabel147MouseExited
 
     private void jLabel147MousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel147MousePressed
-        // TODO add your handling code here:
+        //-------ADDING "CARE" REACTION ON "USER3" POST.
+        P3.setLikes(0);
+        P3.like();
+        jLabel138.setText(String.valueOf(P3.getLikes()));
+        jLabel138.setVisible(true);
+        jLabel142.setForeground(new Color(253, 216, 53));
+        jLabel142.setText("Care");
+        ImageIcon icon = new ImageIcon(getClass().getResource("/facebook/simulator/images/Care32px.png"));
+        jLabel142.setIcon(icon);
+        ImageIcon icon2 = new ImageIcon(getClass().getResource("/facebook/simulator/images/Care.png"));
+        jLabel138.setIcon(icon2);
+        jPanel113.setVisible(false);
     }//GEN-LAST:event_jLabel147MousePressed
 
     private void jLabel148MouseMoved(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel148MouseMoved
@@ -6793,7 +6851,18 @@ public class GUI extends javax.swing.JFrame {
     }//GEN-LAST:event_jLabel148MouseExited
 
     private void jLabel148MousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel148MousePressed
-        // TODO add your handling code here:
+        //-------ADDING "HAHA" REACTION ON "USER3" POST.
+        P3.setLikes(0);
+        P3.like();
+        jLabel138.setText(String.valueOf(P3.getLikes()));
+        jLabel138.setVisible(true);
+        jLabel142.setForeground(new Color(253, 216, 53));
+        jLabel142.setText("Haha");
+        ImageIcon icon = new ImageIcon(getClass().getResource("/facebook/simulator/images/Haha32px.png"));
+        jLabel142.setIcon(icon);
+        ImageIcon icon2 = new ImageIcon(getClass().getResource("/facebook/simulator/images/Haha.png"));
+        jLabel138.setIcon(icon2);
+        jPanel113.setVisible(false);
     }//GEN-LAST:event_jLabel148MousePressed
 
     private void jLabel149MouseMoved(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel149MouseMoved
@@ -6852,6 +6921,7 @@ public class GUI extends javax.swing.JFrame {
     }//GEN-LAST:event_jPanel122MouseExited
 
     private void jLabel141MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel141MouseClicked
+        //-------REMOVE "USER1" AS FRIEND.
         int remove = JOptionPane.showConfirmDialog(this, "Remove " + User1.getName() + " as friend?", "Remove friend", JOptionPane.OK_CANCEL_OPTION, HEIGHT, deleteUser);
         if (remove == JOptionPane.OK_OPTION) {
             Me.getFriends().remove(User1);
@@ -6863,6 +6933,7 @@ public class GUI extends javax.swing.JFrame {
     }//GEN-LAST:event_jLabel141MouseClicked
 
     private void jLabel152MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel152MouseClicked
+        //-------REMOVE "USER2" AS FRIEND.
         int remove = JOptionPane.showConfirmDialog(this, "Remove " + User2.getName() + " as friend?", "Remove friend", JOptionPane.OK_CANCEL_OPTION, HEIGHT, deleteUser);
         if (remove == JOptionPane.OK_OPTION) {
             Me.getFriends().remove(User2);
@@ -6872,6 +6943,7 @@ public class GUI extends javax.swing.JFrame {
     }//GEN-LAST:event_jLabel152MouseClicked
 
     private void jLabel153MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel153MouseClicked
+        //-------REMOVE "USER3" AS FRIEND.
         int remove = JOptionPane.showConfirmDialog(this, "Remove " + User3.getName() + " as friend?", "Remove friend", JOptionPane.OK_CANCEL_OPTION, HEIGHT, deleteUser);
         if (remove == JOptionPane.OK_OPTION) {
             Me.getFriends().remove(User3);
@@ -6882,6 +6954,7 @@ public class GUI extends javax.swing.JFrame {
     }//GEN-LAST:event_jLabel153MouseClicked
 
     private void jLabel154MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel154MouseClicked
+        //-------REMOVE "USER4" AS FRIEND.
         int remove = JOptionPane.showConfirmDialog(this, "Remove " + User4.getName() + " as friend?", "Remove friend", JOptionPane.OK_CANCEL_OPTION, HEIGHT, deleteUser);
         if (remove == JOptionPane.OK_OPTION) {
             Me.getFriends().remove(User4);
@@ -6891,6 +6964,7 @@ public class GUI extends javax.swing.JFrame {
     }//GEN-LAST:event_jLabel154MouseClicked
 
     private void jLabel157MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel157MouseClicked
+        //-------REMOVE "USER5" AS FRIEND.
         int remove = JOptionPane.showConfirmDialog(this, "Remove " + User5.getName() + " as friend?", "Remove friend", JOptionPane.OK_CANCEL_OPTION, HEIGHT, deleteUser);
         if (remove == JOptionPane.OK_OPTION) {
             Me.getFriends().remove(User5);
@@ -6900,12 +6974,13 @@ public class GUI extends javax.swing.JFrame {
     }//GEN-LAST:event_jLabel157MouseClicked
 
     private void jLabel160MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel160MouseClicked
+        //-------REMOVE "USER6" AS FRIEND.
         int remove = JOptionPane.showConfirmDialog(this, "Remove " + User6.getName() + " as friend?", "Remove friend", JOptionPane.OK_CANCEL_OPTION, HEIGHT, deleteUser);
         if (remove == JOptionPane.OK_OPTION) {
             Me.getFriends().remove(User6);
             jLabel37.setText("Friends  " + String.valueOf(Me.getFriends().size()));
             jPanel122.setVisible(false);
-        }        // TODO add your handling code here:
+        }
     }//GEN-LAST:event_jLabel160MouseClicked
 
     private void jButton7jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton7jButton2ActionPerformed
@@ -6929,6 +7004,8 @@ public class GUI extends javax.swing.JFrame {
     }//GEN-LAST:event_jTextField7jTextField1MouseMoved
 
     private void jLabel118MousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel118MousePressed
+        //-------ADDING "WOW" REACTION ON "USER1" POST. 
+        P6.setLikes(0);
         P6.like();
         jLabel52.setText(String.valueOf(P6.getLikes()));
         jLabel52.setVisible(true);
@@ -6938,10 +7015,12 @@ public class GUI extends javax.swing.JFrame {
         jLabel54.setIcon(icon);
         ImageIcon icon2 = new ImageIcon(getClass().getResource("/facebook/simulator/images/Wow.png"));
         jLabel52.setIcon(icon2);
-        jPanel36.setVisible(false);        // TODO add your handling code here:
+        jPanel36.setVisible(false);
     }//GEN-LAST:event_jLabel118MousePressed
 
     private void jLabel119MousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel119MousePressed
+        //-------ADDING "SAD" REACTION ON "USER1" POST.
+        P6.setLikes(0);
         P6.like();
         jLabel52.setText(String.valueOf(P6.getLikes()));
         jLabel52.setVisible(true);
@@ -6955,6 +7034,8 @@ public class GUI extends javax.swing.JFrame {
     }//GEN-LAST:event_jLabel119MousePressed
 
     private void jLabel120MousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel120MousePressed
+        //-------ADDING "ANGRY" REACTION ON "USER1" POST.
+        P6.setLikes(0);
         P6.like();
         jLabel52.setText(String.valueOf(P6.getLikes()));
         jLabel52.setVisible(true);
@@ -6968,6 +7049,8 @@ public class GUI extends javax.swing.JFrame {
     }//GEN-LAST:event_jLabel120MousePressed
 
     private void jLabel90MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel90MouseClicked
+        jPanel123.setVisible(true);
+        //----ADDING STORY BY IMAGE URL
         String imageURL = JOptionPane.showInputDialog(this, "Enter image URL");
         try {
             URL image = new URL(imageURL);
@@ -6985,25 +7068,85 @@ public class GUI extends javax.swing.JFrame {
                 jLabel161.setIcon(freindsIcon);
 
             }
+            //--------------ADDING STORY TO ARRAY LIST 
             Me.addStory(firstStory);
             ImageIcon pfp = new ImageIcon(getClass().getResource("/facebook/simulator/images/pfp42px.png"));
-            jLabel162.setIcon(pfp);
+            jLabel163.setIcon(pfp);
             jLabel162.setText(firstStory.getAuthor());
             jLabel161.setText(firstStory.getTimeCreats());
             jPanel124.setBackground(Color.white);
             jPanel123.setBackground(Color.white);
             jLabel114.setVisible(true);
             jLabel114.setIcon(storyImage);
-
+            //---ERROR MESSAGE IF THE URL ENTERED INVALID
         } catch (MalformedURLException ex) {
             JOptionPane.showMessageDialog(null, "Invalid URL: " + imageURL, "Error", JOptionPane.ERROR_MESSAGE);
         }
     }//GEN-LAST:event_jLabel90MouseClicked
 
     private void jLabel114MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel114MouseClicked
- 
-        
+
+
     }//GEN-LAST:event_jLabel114MouseClicked
+
+    private void jLabel149MousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel149MousePressed
+        //-------ADDING "WOW" REACTION ON "USER3" POST.
+        P3.setLikes(0);
+        P3.like();
+        jLabel138.setText(String.valueOf(P3.getLikes()));
+        jLabel138.setVisible(true);
+        jLabel142.setForeground(new Color(253, 216, 53));
+        jLabel142.setText("Wow");
+        ImageIcon icon = new ImageIcon(getClass().getResource("/facebook/simulator/images/Wow32px.png"));
+        jLabel142.setIcon(icon);
+        ImageIcon icon2 = new ImageIcon(getClass().getResource("/facebook/simulator/images/Wow.png"));
+        jLabel138.setIcon(icon2);
+        jPanel113.setVisible(false);
+    }//GEN-LAST:event_jLabel149MousePressed
+
+    private void jLabel151MousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel151MousePressed
+        //-------ADDING "ANGRY" REACTION ON "USER3" POST.
+        P3.setLikes(0);
+        P3.like();
+        jLabel138.setText(String.valueOf(P3.getLikes()));
+        jLabel138.setVisible(true);
+        jLabel142.setForeground(new Color(226, 76, 75));
+        jLabel142.setText("Angry");
+        ImageIcon icon = new ImageIcon(getClass().getResource("/facebook/simulator/images/Angry32px.png"));
+        jLabel142.setIcon(icon);
+        ImageIcon icon2 = new ImageIcon(getClass().getResource("/facebook/simulator/images/Angry.png"));
+        jLabel138.setIcon(icon2);
+        jPanel113.setVisible(false);
+    }//GEN-LAST:event_jLabel151MousePressed
+
+    private void jLabel150MousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel150MousePressed
+        //-------ADDING "SAD" REACTION ON "USER3" POST.
+        P3.setLikes(0);
+        P3.like();
+        jLabel138.setText(String.valueOf(P3.getLikes()));
+        jLabel138.setVisible(true);
+        jLabel142.setForeground(new Color(253, 216, 53));
+        jLabel142.setText("Sad");
+        ImageIcon icon = new ImageIcon(getClass().getResource("/facebook/simulator/images/Sad32px.png"));
+        jLabel142.setIcon(icon);
+        ImageIcon icon2 = new ImageIcon(getClass().getResource("/facebook/simulator/images/Sad.png"));
+        jLabel138.setIcon(icon2);
+        jPanel113.setVisible(false);
+    }//GEN-LAST:event_jLabel150MousePressed
+
+    private void jLabel90MouseMoved(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel90MouseMoved
+        ImageIcon icon = new ImageIcon(getClass().getResource("/facebook/simulator/images/plus80px.png"));
+        jLabel90.setIcon(icon);
+    }//GEN-LAST:event_jLabel90MouseMoved
+
+    private void jLabel90MouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel90MouseExited
+        ImageIcon icon = new ImageIcon(getClass().getResource("/facebook/simulator/images/plus.png"));
+        jLabel90.setIcon(icon);
+    }//GEN-LAST:event_jLabel90MouseExited
+
+    private void jLabel164MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel164MouseClicked
+
+    }//GEN-LAST:event_jLabel164MouseClicked
     /**
      * @param args the command line arguments
      */
@@ -7130,6 +7273,8 @@ public class GUI extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel160;
     private javax.swing.JLabel jLabel161;
     private javax.swing.JLabel jLabel162;
+    private javax.swing.JLabel jLabel163;
+    private javax.swing.JLabel jLabel164;
     private javax.swing.JLabel jLabel17;
     private javax.swing.JLabel jLabel18;
     private javax.swing.JLabel jLabel19;

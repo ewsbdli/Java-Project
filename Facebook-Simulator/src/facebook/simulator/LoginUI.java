@@ -1,6 +1,5 @@
 package facebook.simulator;
 
-import javax.swing.JFrame;
 import javax.swing.JOptionPane;
 
 public class LoginUI extends javax.swing.JFrame {
@@ -11,7 +10,8 @@ public class LoginUI extends javax.swing.JFrame {
     public LoginUI() {
         initComponents();
         this.setIconImage(new javax.swing.ImageIcon(getClass().getResource("/facebook/simulator/images/facebook_icon.png")).getImage());
-        this.setExtendedState(JFrame.MAXIMIZED_BOTH);
+        //--------DISPLAY WINDOW IN THE CENTER.
+        this.setLocationRelativeTo(null);
 
     }
 

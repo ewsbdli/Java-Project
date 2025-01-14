@@ -10,6 +10,7 @@ class User {
     private ArrayList<Story> story;
     private ArrayList<User> friends;
 
+  
     public User(String name) {
         this.name = name;
         this.friends = new ArrayList<>();
